@@ -1,0 +1,12 @@
+// C-- v0.2: variables and expressions
+
+let x = 10;
+let y = x * 2 + 5;
+
+say y;
+
+x = 100;
+say x;
+
+let result = (x + y) / 5;
+say result;

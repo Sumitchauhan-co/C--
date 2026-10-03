@@ -1,0 +1,3 @@
+C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/c--.dir
+C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/edit_cache.dir
+C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/rebuild_cache.dir
