@@ -1,76 +1,147 @@
 #include "interpreter/interpreter.hpp"
-
 #include <iostream>
 #include <stdexcept>
+#include <string>
+#include <variant>
 
-void Interpreter::execute(const Program& program) {
-    for (const auto& statement : program) {
-        executeStatement(*statement);
-    }
-}
+namespace
+{
 
-void Interpreter::executeStatement(const Stmt& statement) {
-    if (const auto* declaration = dynamic_cast<const VariableDeclaration*>(&statement)) {
-        const long long value = evaluate(*declaration->initializer);
-        environment_.define(declaration->name, value);
-        return;
-    }
-
-    if (const auto* assignment = dynamic_cast<const Assignment*>(&statement)) {
-        const long long value = evaluate(*assignment->value);
-        environment_.assign(assignment->name, value);
-        return;
-    }
-
-    if (const auto* say = dynamic_cast<const SayStatement*>(&statement)) {
-        std::cout << evaluate(*say->expression) << '\n';
-        return;
-    }
-
-    if (const auto* expression = dynamic_cast<const ExpressionStatement*>(&statement)) {
-        static_cast<void>(evaluate(*expression->expression));
-        return;
-    }
-
-    throw std::runtime_error("Runtime error: unknown statement");
-}
-
-long long Interpreter::evaluate(const Expr& expression) {
-    if (const auto* number = dynamic_cast<const NumberExpr*>(&expression)) {
-        return number->value;
-    }
-
-    if (const auto* variable = dynamic_cast<const VariableExpr*>(&expression)) {
-        return environment_.get(variable->name);
-    }
-
-    if (const auto* unary = dynamic_cast<const UnaryExpr*>(&expression)) {
-        const long long value = evaluate(*unary->operand);
-
-        if (unary->op == "-") {
-            return -value;
+    long long number(const Value &v, const std::string &op)
+    {
+        if (!std::holds_alternative<long long>(v))
+        {
+            throw std::runtime_error("Runtime error: '" + op + "' requires numeric operands.");
         }
-
-        throw std::runtime_error("Runtime error: unknown unary operator");
+        return std::get<long long>(v);
     }
 
-    if (const auto* binary = dynamic_cast<const BinaryExpr*>(&expression)) {
-        const long long left = evaluate(*binary->left);
-        const long long right = evaluate(*binary->right);
+    void printValue(const Value &v)
+    {
+        if (std::holds_alternative<long long>(v))
+        {
+            std::cout << std::get<long long>(v) << '\n';
+        }
+        else
+        {
+            std::cout << (std::get<bool>(v) ? "true" : "false") << '\n';
+        }
+    }
 
-        if (binary->op == "+") return left + right;
-        if (binary->op == "-") return left - right;
-        if (binary->op == "*") return left * right;
+} // namespace
 
-        if (binary->op == "/") {
-            if (right == 0) {
-                throw std::runtime_error("Runtime error: division by zero");
+void Interpreter::execute(const Program &p)
+{
+    for (const auto &s : p)
+    {
+        executeStatement(*s);
+    }
+}
+
+void Interpreter::executeStatement(const Stmt &s)
+{
+    if (auto *d = dynamic_cast<const VariableDeclaration *>(&s))
+    {
+        environment_.define(d->name, evaluate(*d->initializer));
+        return;
+    }
+    if (auto *a = dynamic_cast<const Assignment *>(&s))
+    {
+        environment_.assign(a->name, evaluate(*a->value));
+        return;
+    }
+    if (auto *say = dynamic_cast<const SayStatement *>(&s))
+    {
+        printValue(evaluate(*say->expression));
+        return;
+    }
+    if (auto *e = dynamic_cast<const ExpressionStatement *>(&s))
+    {
+        evaluate(*e->expression);
+        return;
+    }
+    throw std::runtime_error("Runtime error: unknown statement.");
+}
+
+Value Interpreter::evaluate(const Expr &e)
+{
+    if (auto *n = dynamic_cast<const NumberExpr *>(&e))
+    {
+        return n->value;
+    }
+    if (auto *b = dynamic_cast<const BooleanExpr *>(&e))
+    {
+        return b->value;
+    }
+    if (auto *v = dynamic_cast<const VariableExpr *>(&e))
+    {
+        return environment_.get(v->name);
+    }
+
+    if (auto *u = dynamic_cast<const UnaryExpr *>(&e))
+    {
+        if (u->op == "-")
+        {
+            return -number(evaluate(*u->operand), "-");
+        }
+        throw std::runtime_error("Runtime error: unknown unary operator '" + u->op + "'.");
+    }
+
+    if (auto *b = dynamic_cast<const BinaryExpr *>(&e))
+    {
+        Value l = evaluate(*b->left);
+        Value r = evaluate(*b->right);
+        const auto &op = b->op;
+
+        if (op == "+" || op == "-" || op == "*" || op == "/")
+        {
+            auto a = number(l, op);
+            auto c = number(r, op);
+            if (op == "+")
+                return a + c;
+            if (op == "-")
+                return a - c;
+            if (op == "*")
+                return a * c;
+            if (c == 0)
+            {
+                throw std::runtime_error("Runtime error: division by zero.");
             }
-            return left / right;
+            return a / c;
         }
 
-        throw std::runtime_error("Runtime error: unknown binary operator");
-    }
+        if (op == ">" || op == ">=" || op == "<" || op == "<=")
+        {
+            auto a = number(l, op);
+            auto c = number(r, op);
+            if (op == ">")
+                return a > c;
+            if (op == ">=")
+                return a >= c;
+            if (op == "<")
+                return a < c;
+            return a <= c;
+        }
 
-    throw std::runtime_error("Runtime error: unknown expression");
+        if (op == "==" || op == "!=")
+        {
+            if (l.index() != r.index())
+            {
+                return op == "!=";
+            }
+
+            bool eq;
+            if (std::holds_alternative<long long>(l))
+            {
+                eq = std::get<long long>(l) == std::get<long long>(r);
+            }
+            else
+            {
+                eq = std::get<bool>(l) == std::get<bool>(r);
+            }
+            return op == "==" ? eq : !eq;
+        }
+        throw std::runtime_error("Runtime error: unknown binary operator '" + op + "'.");
+    }
+    throw std::runtime_error("Runtime error: unknown expression.");
 }

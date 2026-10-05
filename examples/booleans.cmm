@@ -1,0 +1,15 @@
+// C-- v0.3 example: booleans and comparisons
+let age = 20;
+let minimumAge = 18;
+say age > minimumAge;
+say age >= 20;
+say age < 30;
+say age <= 25;
+say age == 20;
+say(age != 15);
+let adult = age >= minimumAge;
+say adult;
+let passed = true;
+say passed == true;
+passed = false;
+say passed != true;

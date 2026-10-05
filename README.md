@@ -18,6 +18,99 @@ Source Code
    Runtime
 ```
 
+## Building
+
+Requirements:
+
+- C++17 or newer
+- CMake 3.20+
+- A C++ compiler (GCC/MinGW, Clang, or MSVC)
+
+### 1. Install CMake
+
+Choose the command matching your operating system package manager to install CMake:
+
+#### Windows (PowerShell / winget)
+
+```powershell
+winget install Kitware.CMake
+```
+
+#### Windows (Chocolatey)
+
+```powershell
+choco install cmake
+```
+
+_Note: Restart your terminal/VS Code after installing so the system recognizes the `cmake` path._
+
+#### macOS (Homebrew)
+
+```bash
+brew install cmake
+```
+
+#### Linux (Debian / Ubuntu)
+
+```bash
+sudo apt update && sudo apt install cmake
+```
+
+---
+
+### 2. Configure & Build
+
+Depending on your local compiler configuration, choose the build method that matches your environment:
+
+#### Option A: Windows (using MinGW / GCC)
+
+Explicitly configure CMake to generate MinGW Makefiles to prevent defaulting to Visual Studio's `nmake`:
+
+```powershell
+# Configure env setup
+$env:Path += ";C:\Program Files\CMake\bin"
+```
+
+```powershell
+# 1. Configure the project (Note the space before the period, or just delete the period)
+cmake -B build .
+
+# 2. Compile the source
+cmake --build build
+
+# 3. Run the compiler executable
+.\build\cmm.exe examples\variables.cmm
+.\build\cmm.exe examples\booleans.cmm
+```
+
+#### Option B: Windows (using Visual Studio / MSVC)
+
+```powershell
+# 1. Configure for Visual Studio 2022 solution generators
+cmake -S . -B build -G "Visual Studio 17 2022"
+
+# 2. Compile the source
+cmake --build build
+
+# 3. Run the compiler executable
+.\build\Debug\c--.exe examples\variables.cmm
+```
+
+#### Option C: macOS & Linux
+
+```bash
+# 1. Configure the project
+cmake -S . -B build
+
+# 2. Compile the source
+cmake --build build
+
+# 3. Run the compiler executable
+./build/c-- examples/variables.cmm
+```
+
+---
+
 ### 1. Source Code
 
 The program written by the user using the language's syntax.

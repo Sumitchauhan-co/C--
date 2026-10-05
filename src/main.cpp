@@ -1,52 +1,52 @@
 #include "interpreter/interpreter.hpp"
 #include "lexer/lexer.hpp"
 #include "parser/parser.hpp"
-
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <string>
 
-static std::string readFile(const std::string &path)
-{
-    std::ifstream file(path);
-
-    if (!file)
-    {
-        throw std::runtime_error("Could not open file: " + path);
-    }
-
-    std::ostringstream buffer;
-    buffer << file.rdbuf();
-    return buffer.str();
-}
-
 int main(int argc, char *argv[])
 {
-    if (argc != 2)
-    {
-        std::cerr << "Usage: c-- <file.cmm>\n";
-        return 1;
-    }
+  if (argc != 2)
+  {
+    std::cerr << "Usage: cmm <file.cmm>\n";
+    return 1;
+  }
 
-    try
-    {
-        const std::string source = readFile(argv[1]);
+  std::string filename = argv[1];
+  if (filename.size() < 4 || filename.substr(filename.size() - 4) != ".cmm")
+  {
+    std::cerr << "Error: source file must use the .cmm extension.\n";
+    return 1;
+  }
 
-        Lexer lexer(source);
-        const auto tokens = lexer.tokenize();
+  std::ifstream file(filename);
+  if (!file)
+  {
+    std::cerr << "Error: could not open file '" << filename << "'.\n";
+    return 1;
+  }
 
-        Parser parser(tokens);
-        const auto program = parser.parse();
+  std::stringstream buffer;
+  buffer << file.rdbuf();
 
-        Interpreter interpreter;
-        interpreter.execute(program);
+  try
+  {
+    Lexer lexer(buffer.str());
+    auto tokens = lexer.tokenize();
 
-        return 0;
-    }
-    catch (const std::exception &error)
-    {
-        std::cerr << error.what() << '\n';
-        return 1;
-    }
+    Parser parser(tokens);
+    auto program = parser.parse();
+
+    Interpreter interpreter;
+    interpreter.execute(program);
+  }
+  catch (const std::exception &e)
+  {
+    std::cerr << e.what() << '\n';
+    return 1;
+  }
+
+  return 0;
 }

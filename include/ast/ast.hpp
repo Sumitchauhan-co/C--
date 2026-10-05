@@ -5,73 +5,97 @@
 #include <utility>
 #include <vector>
 
-struct Expr {
-    virtual ~Expr() = default;
+// ==========================================
+// Expressions (Expr)
+// ==========================================
+
+struct Expr
+{
+  virtual ~Expr() = default;
 };
 
 using ExprPtr = std::unique_ptr<Expr>;
 
-struct NumberExpr final : Expr {
-    explicit NumberExpr(long long value) : value(value) {}
-    long long value;
+struct NumberExpr final : Expr
+{
+  explicit NumberExpr(long long value) : value(value) {}
+  long long value;
 };
 
-struct VariableExpr final : Expr {
-    explicit VariableExpr(std::string name) : name(std::move(name)) {}
-    std::string name;
+struct BooleanExpr final : Expr
+{
+  explicit BooleanExpr(bool value) : value(value) {}
+  bool value;
 };
 
-struct BinaryExpr final : Expr {
-    BinaryExpr(ExprPtr left, std::string op, ExprPtr right)
-        : left(std::move(left)), op(std::move(op)), right(std::move(right)) {}
-
-    ExprPtr left;
-    std::string op;
-    ExprPtr right;
+struct VariableExpr final : Expr
+{
+  explicit VariableExpr(std::string name) : name(std::move(name)) {}
+  std::string name;
 };
 
-struct UnaryExpr final : Expr {
-    UnaryExpr(std::string op, ExprPtr operand)
-        : op(std::move(op)), operand(std::move(operand)) {}
+struct BinaryExpr final : Expr
+{
+  BinaryExpr(ExprPtr left, std::string op, ExprPtr right)
+      : left(std::move(left)), op(std::move(op)), right(std::move(right)) {}
 
-    std::string op;
-    ExprPtr operand;
+  ExprPtr left;
+  std::string op;
+  ExprPtr right;
 };
 
-struct Stmt {
-    virtual ~Stmt() = default;
+struct UnaryExpr final : Expr
+{
+  UnaryExpr(std::string op, ExprPtr operand)
+      : op(std::move(op)), operand(std::move(operand)) {}
+
+  std::string op;
+  ExprPtr operand;
+};
+
+// ==========================================
+// Statements (Stmt)
+// ==========================================
+
+struct Stmt
+{
+  virtual ~Stmt() = default;
 };
 
 using StmtPtr = std::unique_ptr<Stmt>;
 
-struct VariableDeclaration final : Stmt {
-    VariableDeclaration(std::string name, ExprPtr initializer)
-        : name(std::move(name)), initializer(std::move(initializer)) {}
+struct VariableDeclaration final : Stmt
+{
+  VariableDeclaration(std::string name, ExprPtr initializer)
+      : name(std::move(name)), initializer(std::move(initializer)) {}
 
-    std::string name;
-    ExprPtr initializer;
+  std::string name;
+  ExprPtr initializer;
 };
 
-struct Assignment final : Stmt {
-    Assignment(std::string name, ExprPtr value)
-        : name(std::move(name)), value(std::move(value)) {}
+struct Assignment final : Stmt
+{
+  Assignment(std::string name, ExprPtr value)
+      : name(std::move(name)), value(std::move(value)) {}
 
-    std::string name;
-    ExprPtr value;
+  std::string name;
+  ExprPtr value;
 };
 
-struct SayStatement final : Stmt {
-    explicit SayStatement(ExprPtr expression)
-        : expression(std::move(expression)) {}
-
-    ExprPtr expression;
+struct SayStatement final : Stmt
+{
+  explicit SayStatement(ExprPtr expression) : expression(std::move(expression)) {}
+  ExprPtr expression;
 };
 
-struct ExpressionStatement final : Stmt {
-    explicit ExpressionStatement(ExprPtr expression)
-        : expression(std::move(expression)) {}
-
-    ExprPtr expression;
+struct ExpressionStatement final : Stmt
+{
+  explicit ExpressionStatement(ExprPtr expression) : expression(std::move(expression)) {}
+  ExprPtr expression;
 };
+
+// ==========================================
+// Program Entry
+// ==========================================
 
 using Program = std::vector<StmtPtr>;
