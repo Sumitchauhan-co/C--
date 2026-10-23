@@ -81,6 +81,7 @@ cmake --build build
 # 3. Run the compiler executable
 .\build\cmm.exe examples\variables.cmm
 .\build\cmm.exe examples\booleans.cmm
+.\build\cmm.exe examples\conditions.cmm
 ```
 
 #### Option B: Windows (using Visual Studio / MSVC)

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(cmm VERSION 0.2 LANGUAGES CXX)
+project(cmm VERSION 0.4 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -24,6 +24,8 @@ add_executable(cmm
     src/parser/parser.cpp
     src/interpreter/interpreter.cpp
     src/runtime/environment.cpp
+    src/runtime/value.cpp
+    src/ast/ast.cpp
 )
 
 target_include_directories(cmm PRIVATE include)

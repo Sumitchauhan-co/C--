@@ -84,6 +84,22 @@ build CMakeFiles/cmm.dir/src/runtime/environment.cpp.obj: CXX_COMPILER__cmm_unsc
   OBJECT_FILE_DIR = CMakeFiles\cmm.dir\src\runtime
   TARGET_SUPPORT_DIR = CMakeFiles\cmm.dir
 
+build CMakeFiles/cmm.dir/src/runtime/value.cpp.obj: CXX_COMPILER__cmm_unscanned_ C$:/Users/HP/Desktop/Development/Projects/C--/src/runtime/value.cpp || cmake_object_order_depends_target_cmm
+  DEP_FILE = CMakeFiles\cmm.dir\src\runtime\value.cpp.obj.d
+  FLAGS = -std=c++17 -Wall -Wextra -Wpedantic
+  INCLUDES = -IC:/Users/HP/Desktop/Development/Projects/C--/include
+  OBJECT_DIR = CMakeFiles\cmm.dir
+  OBJECT_FILE_DIR = CMakeFiles\cmm.dir\src\runtime
+  TARGET_SUPPORT_DIR = CMakeFiles\cmm.dir
+
+build CMakeFiles/cmm.dir/src/ast/ast.cpp.obj: CXX_COMPILER__cmm_unscanned_ C$:/Users/HP/Desktop/Development/Projects/C--/src/ast/ast.cpp || cmake_object_order_depends_target_cmm
+  DEP_FILE = CMakeFiles\cmm.dir\src\ast\ast.cpp.obj.d
+  FLAGS = -std=c++17 -Wall -Wextra -Wpedantic
+  INCLUDES = -IC:/Users/HP/Desktop/Development/Projects/C--/include
+  OBJECT_DIR = CMakeFiles\cmm.dir
+  OBJECT_FILE_DIR = CMakeFiles\cmm.dir\src\ast
+  TARGET_SUPPORT_DIR = CMakeFiles\cmm.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target cmm
@@ -92,7 +108,7 @@ build CMakeFiles/cmm.dir/src/runtime/environment.cpp.obj: CXX_COMPILER__cmm_unsc
 #############################################
 # Link the executable cmm.exe
 
-build cmm.exe: CXX_EXECUTABLE_LINKER__cmm_ CMakeFiles/cmm.dir/src/main.cpp.obj CMakeFiles/cmm.dir/src/lexer/lexer.cpp.obj CMakeFiles/cmm.dir/src/parser/parser.cpp.obj CMakeFiles/cmm.dir/src/interpreter/interpreter.cpp.obj CMakeFiles/cmm.dir/src/runtime/environment.cpp.obj
+build cmm.exe: CXX_EXECUTABLE_LINKER__cmm_ CMakeFiles/cmm.dir/src/main.cpp.obj CMakeFiles/cmm.dir/src/lexer/lexer.cpp.obj CMakeFiles/cmm.dir/src/parser/parser.cpp.obj CMakeFiles/cmm.dir/src/interpreter/interpreter.cpp.obj CMakeFiles/cmm.dir/src/runtime/environment.cpp.obj CMakeFiles/cmm.dir/src/runtime/value.cpp.obj CMakeFiles/cmm.dir/src/ast/ast.cpp.obj
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\cmm.dir
   POST_BUILD = cd .

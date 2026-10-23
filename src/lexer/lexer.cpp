@@ -2,23 +2,50 @@
 #include <cctype>
 #include <stdexcept>
 #include <unordered_map>
+#include <utility>
+
+// ==========================================
+// Token Type String Conversion
+// ==========================================
 
 std::string tokenTypeName(TokenType type)
 {
     switch (type)
     {
+    case TokenType::EndOfFile:
+        return "EndOfFile";
+    case TokenType::Newline:
+        return "Newline";
     case TokenType::Number:
         return "Number";
+    case TokenType::String:
+        return "String";
     case TokenType::Identifier:
         return "Identifier";
-    case TokenType::Let:
-        return "Let";
-    case TokenType::Say:
-        return "Say";
     case TokenType::True:
         return "True";
     case TokenType::False:
         return "False";
+    case TokenType::Let:
+        return "Let";
+    case TokenType::Fix:
+        return "Fix";
+    case TokenType::Say:
+        return "Say";
+    case TokenType::Ask:
+        return "Ask";
+    case TokenType::If:
+        return "If";
+    case TokenType::Elif:
+        return "Elif";
+    case TokenType::Else:
+        return "Else";
+    case TokenType::And:
+        return "And";
+    case TokenType::Or:
+        return "Or";
+    case TokenType::Not:
+        return "Not";
     case TokenType::Plus:
         return "Plus";
     case TokenType::Minus:
@@ -27,6 +54,12 @@ std::string tokenTypeName(TokenType type)
         return "Star";
     case TokenType::Slash:
         return "Slash";
+    case TokenType::Equal:
+        return "Equal";
+    case TokenType::EqualEqual:
+        return "EqualEqual";
+    case TokenType::BangEqual:
+        return "BangEqual";
     case TokenType::Greater:
         return "Greater";
     case TokenType::GreaterEqual:
@@ -35,47 +68,48 @@ std::string tokenTypeName(TokenType type)
         return "Less";
     case TokenType::LessEqual:
         return "LessEqual";
-    case TokenType::Equal:
-        return "Equal";
-    case TokenType::EqualEqual:
-        return "EqualEqual";
-    case TokenType::BangEqual:
-        return "BangEqual";
     case TokenType::LeftParen:
         return "LeftParen";
     case TokenType::RightParen:
         return "RightParen";
+    case TokenType::LeftBrace:
+        return "LeftBrace";
+    case TokenType::RightBrace:
+        return "RightBrace";
+    case TokenType::Comma:
+        return "Comma";
     case TokenType::Semicolon:
         return "Semicolon";
-    case TokenType::EndOfFile:
-        return "EndOfFile";
     }
     return "Unknown";
 }
 
+// ==========================================
+// Lexer Core Implementation
+// ==========================================
+
 Lexer::Lexer(std::string source) : source_(std::move(source)) {}
 
-char Lexer::peek() const
+char Lexer::peek(std::size_t distance) const
 {
-    return isAtEnd() ? '\0' : source_[current_];
+    return current_ + distance < source_.size() ? source_[current_ + distance] : '\0';
 }
 
-char Lexer::peekNext() const
+char Lexer::take()
 {
-    return (current_ + 1 >= source_.size()) ? '\0' : source_[current_ + 1];
-}
-
-char Lexer::advance()
-{
-    char c = source_[current_++];
-    if (c == '\n')
+    char c = peek();
+    if (c != '\0')
     {
-        ++line_;
-        column_ = 1;
-    }
-    else
-    {
-        ++column_;
+        ++current_;
+        if (c == '\n')
+        {
+            ++line_;
+            column_ = 1;
+        }
+        else
+        {
+            ++column_;
+        }
     }
     return c;
 }
@@ -90,9 +124,14 @@ bool Lexer::isDigit(char c) const
     return std::isdigit(static_cast<unsigned char>(c)) != 0;
 }
 
+bool Lexer::isAlpha(char c) const
+{
+    return std::isalpha(static_cast<unsigned char>(c)) != 0;
+}
+
 bool Lexer::isIdentifierStart(char c) const
 {
-    return std::isalpha(static_cast<unsigned char>(c)) != 0 || c == '_';
+    return isAlpha(c) || c == '_';
 }
 
 bool Lexer::isIdentifierPart(char c) const
@@ -100,168 +139,195 @@ bool Lexer::isIdentifierPart(char c) const
     return isIdentifierStart(c) || isDigit(c);
 }
 
-void Lexer::skipWhitespace()
-{
-    while (!isAtEnd())
-    {
-        char c = peek();
-        if (c == ' ' || c == '\r' || c == '\t' || c == '\n')
-        {
-            advance();
-            continue;
-        }
-        if (c == '/' && peekNext() == '/')
-        {
-            while (!isAtEnd() && peek() != '\n')
-            {
-                advance();
-            }
-            continue;
-        }
-        break;
-    }
-}
-
-Token Lexer::scanNumber()
-{
-    auto startColumn = column_;
-    auto start = current_;
-
-    while (isDigit(peek()))
-    {
-        advance();
-    }
-
-    return {TokenType::Number, source_.substr(start, current_ - start), line_, startColumn};
-}
-
-Token Lexer::scanIdentifier()
-{
-    auto startColumn = column_;
-    auto start = current_;
-
-    while (isIdentifierPart(peek()))
-    {
-        advance();
-    }
-
-    auto text = source_.substr(start, current_ - start);
-    static const std::unordered_map<std::string, TokenType> keywords{
-        {"let", TokenType::Let},
-        {"say", TokenType::Say},
-        {"true", TokenType::True},
-        {"false", TokenType::False}};
-
-    auto it = keywords.find(text);
-    return {it == keywords.end() ? TokenType::Identifier : it->second, text, line_, startColumn};
-}
-
-std::vector<Token> Lexer::tokenize()
+std::vector<Token> Lexer::scan()
 {
     std::vector<Token> tokens;
 
-    while (!isAtEnd())
+    while (peek() != '\0')
     {
-        skipWhitespace();
-        if (isAtEnd())
-            break;
-
+        char c = peek();
         auto tokenLine = line_;
-        auto tokenColumn = column_;
-        char c = advance();
+        auto tokenCol = column_;
 
-        if (isDigit(c))
+        if (c == ' ' || c == '\t' || c == '\r')
         {
-            --current_;
-            --column_;
-            tokens.push_back(scanNumber());
+            take();
+            continue;
+        }
+
+        if (c == '\n' || c == ';')
+        {
+            take();
+            tokens.push_back({TokenType::Newline, ";", tokenLine, tokenCol});
+            continue;
+        }
+
+        if (c == '/' && peek(1) == '/')
+        {
+            while (peek() != '\0' && peek() != '\n')
+                take();
+            continue;
+        }
+
+        if (c == '/' && peek(1) == '*')
+        {
+            take();
+            take();
+            while (peek() != '\0' && !(peek() == '*' && peek(1) == '/'))
+                take();
+            if (peek() == '\0')
+                throw std::runtime_error("Lexer error: Unterminated block comment.");
+            take();
+            take();
+            continue;
+        }
+
+        if (isDigit(c) || (c == '.' && isDigit(peek(1))))
+        {
+            std::string number;
+            bool dot = false;
+            while (isDigit(peek()) || (!dot && peek() == '.'))
+            {
+                if (peek() == '.')
+                    dot = true;
+                number += take();
+            }
+            tokens.push_back({TokenType::Number, number, tokenLine, tokenCol});
+            continue;
+        }
+
+        if (c == '"')
+        {
+            take();
+            std::string value;
+            while (peek() != '\0' && peek() != '"')
+            {
+                if (peek() == '\n')
+                    throw std::runtime_error("Lexer error: String literal cannot cross a newline.");
+                value += take();
+            }
+            if (peek() == '\0')
+                throw std::runtime_error("Lexer error: Unterminated string literal.");
+            take();
+            tokens.push_back({TokenType::String, value, tokenLine, tokenCol});
             continue;
         }
 
         if (isIdentifierStart(c))
         {
-            --current_;
-            --column_;
-            tokens.push_back(scanIdentifier());
+            std::string word;
+            while (isIdentifierPart(peek()))
+            {
+                word += take();
+            }
+
+            TokenType type = TokenType::Identifier;
+            static const std::unordered_map<std::string, TokenType> keywords = {
+                {"let", TokenType::Let},
+                {"fix", TokenType::Fix},
+                {"say", TokenType::Say},
+                {"ask", TokenType::Ask},
+                {"if", TokenType::If},
+                {"elif", TokenType::Elif},
+                {"else", TokenType::Else},
+                {"true", TokenType::True},
+                {"false", TokenType::False},
+                {"and", TokenType::And},
+                {"or", TokenType::Or},
+                {"not", TokenType::Not}};
+
+            auto it = keywords.find(word);
+            if (it != keywords.end())
+            {
+                type = it->second;
+            }
+
+            tokens.push_back({type, word, tokenLine, tokenCol});
             continue;
         }
 
+        take();
         switch (c)
         {
-        case '+':
-            tokens.push_back({TokenType::Plus, "+", tokenLine, tokenColumn});
-            break;
-        case '-':
-            tokens.push_back({TokenType::Minus, "-", tokenLine, tokenColumn});
-            break;
-        case '*':
-            tokens.push_back({TokenType::Star, "*", tokenLine, tokenColumn});
-            break;
-        case '/':
-            tokens.push_back({TokenType::Slash, "/", tokenLine, tokenColumn});
-            break;
         case '(':
-            tokens.push_back({TokenType::LeftParen, "(", tokenLine, tokenColumn});
+            tokens.push_back({TokenType::LeftParen, "(", tokenLine, tokenCol});
             break;
         case ')':
-            tokens.push_back({TokenType::RightParen, ")", tokenLine, tokenColumn});
+            tokens.push_back({TokenType::RightParen, ")", tokenLine, tokenCol});
             break;
-        case ';':
-            tokens.push_back({TokenType::Semicolon, ";", tokenLine, tokenColumn});
+        case '{':
+            tokens.push_back({TokenType::LeftBrace, "{", tokenLine, tokenCol});
             break;
-
-        case '>':
-            if (peek() == '=')
-            {
-                advance();
-                tokens.push_back({TokenType::GreaterEqual, ">=", tokenLine, tokenColumn});
-            }
-            else
-            {
-                tokens.push_back({TokenType::Greater, ">", tokenLine, tokenColumn});
-            }
+        case '}':
+            tokens.push_back({TokenType::RightBrace, "}", tokenLine, tokenCol});
             break;
-
-        case '<':
-            if (peek() == '=')
-            {
-                advance();
-                tokens.push_back({TokenType::LessEqual, "<=", tokenLine, tokenColumn});
-            }
-            else
-            {
-                tokens.push_back({TokenType::Less, "<", tokenLine, tokenColumn});
-            }
+        case ',':
+            tokens.push_back({TokenType::Comma, ",", tokenLine, tokenCol});
+            break;
+        case '+':
+            tokens.push_back({TokenType::Plus, "+", tokenLine, tokenCol});
+            break;
+        case '-':
+            tokens.push_back({TokenType::Minus, "-", tokenLine, tokenCol});
+            break;
+        case '*':
+            tokens.push_back({TokenType::Star, "*", tokenLine, tokenCol});
+            break;
+        case '/':
+            tokens.push_back({TokenType::Slash, "/", tokenLine, tokenCol});
             break;
 
         case '=':
             if (peek() == '=')
             {
-                advance();
-                tokens.push_back({TokenType::EqualEqual, "==", tokenLine, tokenColumn});
+                take();
+                tokens.push_back({TokenType::EqualEqual, "==", tokenLine, tokenCol});
             }
             else
             {
-                tokens.push_back({TokenType::Equal, "=", tokenLine, tokenColumn});
+                tokens.push_back({TokenType::Equal, "=", tokenLine, tokenCol});
             }
             break;
 
         case '!':
             if (peek() == '=')
             {
-                advance();
-                tokens.push_back({TokenType::BangEqual, "!=", tokenLine, tokenColumn});
+                take();
+                tokens.push_back({TokenType::BangEqual, "!=", tokenLine, tokenCol});
             }
             else
             {
-                throw std::runtime_error("Lexer error at line " + std::to_string(tokenLine) +
-                                         ", column " + std::to_string(tokenColumn) + ": unexpected '!'.");
+                throw std::runtime_error("Lexer error: unexpected '!'. Use 'not' or '!='.");
+            }
+            break;
+
+        case '>':
+            if (peek() == '=')
+            {
+                take();
+                tokens.push_back({TokenType::GreaterEqual, ">=", tokenLine, tokenCol});
+            }
+            else
+            {
+                tokens.push_back({TokenType::Greater, ">", tokenLine, tokenCol});
+            }
+            break;
+
+        case '<':
+            if (peek() == '=')
+            {
+                take();
+                tokens.push_back({TokenType::LessEqual, "<=", tokenLine, tokenCol});
+            }
+            else
+            {
+                tokens.push_back({TokenType::Less, "<", tokenLine, tokenCol});
             }
             break;
 
         default:
             throw std::runtime_error("Lexer error at line " + std::to_string(tokenLine) +
-                                     ", column " + std::to_string(tokenColumn) +
+                                     ", column " + std::to_string(tokenCol) +
                                      ": unexpected character '" + std::string(1, c) + "'.");
         }
     }

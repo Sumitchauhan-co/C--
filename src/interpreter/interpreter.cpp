@@ -1,147 +1,244 @@
 #include "interpreter/interpreter.hpp"
+#include <cmath>
 #include <iostream>
 #include <stdexcept>
 #include <string>
-#include <variant>
 
-namespace
+// ==========================================
+// Program & Statement Execution
+// ==========================================
+
+void Interpreter::run(const Program &program)
 {
-
-    long long number(const Value &v, const std::string &op)
+    for (const auto &statement : program)
     {
-        if (!std::holds_alternative<long long>(v))
-        {
-            throw std::runtime_error("Runtime error: '" + op + "' requires numeric operands.");
-        }
-        return std::get<long long>(v);
-    }
-
-    void printValue(const Value &v)
-    {
-        if (std::holds_alternative<long long>(v))
-        {
-            std::cout << std::get<long long>(v) << '\n';
-        }
-        else
-        {
-            std::cout << (std::get<bool>(v) ? "true" : "false") << '\n';
-        }
-    }
-
-} // namespace
-
-void Interpreter::execute(const Program &p)
-{
-    for (const auto &s : p)
-    {
-        executeStatement(*s);
+        execute(statement);
     }
 }
 
-void Interpreter::executeStatement(const Stmt &s)
+void Interpreter::execute(const StmtPtr &statement)
 {
-    if (auto *d = dynamic_cast<const VariableDeclaration *>(&s))
-    {
-        environment_.define(d->name, evaluate(*d->initializer));
+    if (!statement)
         return;
-    }
-    if (auto *a = dynamic_cast<const Assignment *>(&s))
-    {
-        environment_.assign(a->name, evaluate(*a->value));
-        return;
-    }
-    if (auto *say = dynamic_cast<const SayStatement *>(&s))
-    {
-        printValue(evaluate(*say->expression));
-        return;
-    }
-    if (auto *e = dynamic_cast<const ExpressionStatement *>(&s))
-    {
-        evaluate(*e->expression);
-        return;
-    }
-    throw std::runtime_error("Runtime error: unknown statement.");
-}
 
-Value Interpreter::evaluate(const Expr &e)
-{
-    if (auto *n = dynamic_cast<const NumberExpr *>(&e))
+    if (auto node = dynamic_cast<VariableDeclaration *>(statement.get()))
     {
-        return n->value;
-    }
-    if (auto *b = dynamic_cast<const BooleanExpr *>(&e))
-    {
-        return b->value;
-    }
-    if (auto *v = dynamic_cast<const VariableExpr *>(&e))
-    {
-        return environment_.get(v->name);
+        Value initVal = node->initializer ? evaluate(node->initializer) : 0.0;
+        environment_.declare(node->name, initVal, node->immutable);
+        return;
     }
 
-    if (auto *u = dynamic_cast<const UnaryExpr *>(&e))
+    if (auto node = dynamic_cast<Assignment *>(statement.get()))
     {
-        if (u->op == "-")
+        environment_.assign(node->name, evaluate(node->value));
+        return;
+    }
+
+    if (auto node = dynamic_cast<SayStatement *>(statement.get()))
+    {
+        std::cout << valueToString(evaluate(node->expression)) << '\n';
+        return;
+    }
+
+    if (auto node = dynamic_cast<ExpressionStatement *>(statement.get()))
+    {
+        evaluate(node->expression);
+        return;
+    }
+
+    if (auto node = dynamic_cast<IfStmt *>(statement.get()))
+    {
+        for (const auto &branch : node->branches)
         {
-            return -number(evaluate(*u->operand), "-");
-        }
-        throw std::runtime_error("Runtime error: unknown unary operator '" + u->op + "'.");
-    }
-
-    if (auto *b = dynamic_cast<const BinaryExpr *>(&e))
-    {
-        Value l = evaluate(*b->left);
-        Value r = evaluate(*b->right);
-        const auto &op = b->op;
-
-        if (op == "+" || op == "-" || op == "*" || op == "/")
-        {
-            auto a = number(l, op);
-            auto c = number(r, op);
-            if (op == "+")
-                return a + c;
-            if (op == "-")
-                return a - c;
-            if (op == "*")
-                return a * c;
-            if (c == 0)
+            if (requireBoolean(evaluate(branch.condition)))
             {
+                executeBlock(*branch.body);
+                return;
+            }
+        }
+        if (node->otherwiseBranch)
+        {
+            executeBlock(*node->otherwiseBranch);
+        }
+        return;
+    }
+
+    throw std::runtime_error("Runtime error: unknown statement type.");
+}
+
+void Interpreter::executeBlock(const BlockStmt &block)
+{
+    for (const auto &stmt : block.statements)
+    {
+        execute(stmt);
+    }
+}
+
+// ==========================================
+// Expression Evaluation
+// ==========================================
+
+Value Interpreter::evaluate(const ExprPtr &expression)
+{
+    if (!expression)
+        throw std::runtime_error("Runtime error: null expression encountered.");
+
+    if (auto node = dynamic_cast<LiteralExpr *>(expression.get()))
+    {
+        return node->value;
+    }
+
+    if (auto node = dynamic_cast<VariableExpr *>(expression.get()))
+    {
+        return environment_.get(node->name);
+    }
+
+    // Handle CallExpr (e.g. say(...) and ask(...))
+    if (auto node = dynamic_cast<CallExpr *>(expression.get()))
+    {
+        if (node->kind == TokenType::Say)
+        {
+            for (std::size_t i = 0; i < node->arguments.size(); ++i)
+            {
+                if (i)
+                    std::cout << ' ';
+                std::cout << valueToString(evaluate(node->arguments[i]));
+            }
+            std::cout << '\n';
+            return false;
+        }
+
+        if (node->kind == TokenType::Ask)
+        {
+            if (!node->arguments.empty())
+            {
+                std::cout << valueToString(evaluate(node->arguments[0]));
+            }
+            std::string input;
+            if (!std::getline(std::cin, input))
+            {
+                throw std::runtime_error("Runtime error: could not read input.");
+            }
+            if (input == "true")
+                return true;
+            if (input == "false")
+                return false;
+            try
+            {
+                std::size_t used = 0;
+                double num = std::stod(input, &used);
+                if (used == input.size())
+                    return num;
+            }
+            catch (...)
+            {
+            }
+            return input;
+        }
+
+        throw std::runtime_error("Runtime error: unknown function call kind.");
+    }
+
+    if (auto node = dynamic_cast<AskExpr *>(expression.get()))
+    {
+        if (node->prompt)
+        {
+            std::cout << valueToString(evaluate(node->prompt));
+        }
+        std::string input;
+        if (!std::getline(std::cin, input))
+        {
+            throw std::runtime_error("Runtime error: failed to read user input.");
+        }
+        if (input == "true")
+            return true;
+        if (input == "false")
+            return false;
+        try
+        {
+            std::size_t used = 0;
+            double num = std::stod(input, &used);
+            if (used == input.size())
+                return num;
+        }
+        catch (...)
+        {
+        }
+        return input;
+    }
+
+    if (auto node = dynamic_cast<UnaryExpr *>(expression.get()))
+    {
+        Value rightVal = evaluate(node->operand);
+        if (node->op == "-")
+        {
+            return -requireNumber(rightVal);
+        }
+        if (node->op == "not" || node->op == "!")
+        {
+            return !requireBoolean(rightVal);
+        }
+        throw std::runtime_error("Runtime error: unknown unary operator '" + node->op + "'.");
+    }
+
+    if (auto node = dynamic_cast<BinaryExpr *>(expression.get()))
+    {
+        if (node->op == "and" || node->op == "&&")
+        {
+            Value leftVal = evaluate(node->left);
+            if (!requireBoolean(leftVal))
+                return false;
+            return requireBoolean(evaluate(node->right));
+        }
+
+        if (node->op == "or" || node->op == "||")
+        {
+            Value leftVal = evaluate(node->left);
+            if (requireBoolean(leftVal))
+                return true;
+            return requireBoolean(evaluate(node->right));
+        }
+
+        Value leftVal = evaluate(node->left);
+        Value rightVal = evaluate(node->right);
+        const auto &op = node->op;
+
+        if (op == "+")
+        {
+            if (std::holds_alternative<std::string>(leftVal) && std::holds_alternative<std::string>(rightVal))
+            {
+                return std::get<std::string>(leftVal) + std::get<std::string>(rightVal);
+            }
+            return requireNumber(leftVal) + requireNumber(rightVal);
+        }
+        if (op == "-")
+            return requireNumber(leftVal) - requireNumber(rightVal);
+        if (op == "*")
+            return requireNumber(leftVal) * requireNumber(rightVal);
+        if (op == "/")
+        {
+            double rNum = requireNumber(rightVal);
+            if (rNum == 0.0)
                 throw std::runtime_error("Runtime error: division by zero.");
-            }
-            return a / c;
+            return requireNumber(leftVal) / rNum;
         }
 
-        if (op == ">" || op == ">=" || op == "<" || op == "<=")
-        {
-            auto a = number(l, op);
-            auto c = number(r, op);
-            if (op == ">")
-                return a > c;
-            if (op == ">=")
-                return a >= c;
-            if (op == "<")
-                return a < c;
-            return a <= c;
-        }
+        if (op == ">")
+            return requireNumber(leftVal) > requireNumber(rightVal);
+        if (op == ">=")
+            return requireNumber(leftVal) >= requireNumber(rightVal);
+        if (op == "<")
+            return requireNumber(leftVal) < requireNumber(rightVal);
+        if (op == "<=")
+            return requireNumber(leftVal) <= requireNumber(rightVal);
 
-        if (op == "==" || op == "!=")
-        {
-            if (l.index() != r.index())
-            {
-                return op == "!=";
-            }
+        if (op == "==")
+            return valuesEqual(leftVal, rightVal);
+        if (op == "!=")
+            return !valuesEqual(leftVal, rightVal);
 
-            bool eq;
-            if (std::holds_alternative<long long>(l))
-            {
-                eq = std::get<long long>(l) == std::get<long long>(r);
-            }
-            else
-            {
-                eq = std::get<bool>(l) == std::get<bool>(r);
-            }
-            return op == "==" ? eq : !eq;
-        }
         throw std::runtime_error("Runtime error: unknown binary operator '" + op + "'.");
     }
-    throw std::runtime_error("Runtime error: unknown expression.");
+
+    throw std::runtime_error("Runtime error: unknown expression type.");
 }

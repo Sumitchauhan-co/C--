@@ -1,0 +1,9 @@
+let temperature = ask("Enter temperature: ")
+
+if temperature > 30 {
+    say("It is hot.")
+} elif temperature >= 20 {
+    say("It is comfortable.")
+} else {
+    say("It is cold.")
+}

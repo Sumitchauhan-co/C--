@@ -3,10 +3,10 @@
 let x = 10;
 let y = x * 2 + 5;
 
-say y;
+say(y);
 
 x = 100;
-say x;
+say(x);
 
 let result = (x + y) / 5;
-say result;
+say(result);

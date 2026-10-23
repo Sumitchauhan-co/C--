@@ -4,47 +4,50 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <stdexcept>
 #include <string>
 
 int main(int argc, char *argv[])
 {
-  if (argc != 2)
-  {
-    std::cerr << "Usage: cmm <file.cmm>\n";
-    return 1;
-  }
-
-  std::string filename = argv[1];
-  if (filename.size() < 4 || filename.substr(filename.size() - 4) != ".cmm")
-  {
-    std::cerr << "Error: source file must use the .cmm extension.\n";
-    return 1;
-  }
-
-  std::ifstream file(filename);
-  if (!file)
-  {
-    std::cerr << "Error: could not open file '" << filename << "'.\n";
-    return 1;
-  }
-
-  std::stringstream buffer;
-  buffer << file.rdbuf();
-
   try
   {
-    Lexer lexer(buffer.str());
-    auto tokens = lexer.tokenize();
+    std::string source;
 
+    if (argc > 1)
+    {
+      std::string filename = argv[1];
+      std::ifstream file(filename);
+      if (!file)
+      {
+        throw std::runtime_error("Could not open file '" + filename + "'.");
+      }
+      std::ostringstream buffer;
+      buffer << file.rdbuf();
+      source = buffer.str();
+    }
+    else
+    {
+      // Fallback to standard input if no file argument is provided
+      std::ostringstream buffer;
+      buffer << std::cin.rdbuf();
+      source = buffer.str();
+    }
+
+    // 1. Lexical Analysis
+    Lexer lexer(source);
+    auto tokens = lexer.scan();
+
+    // 2. Syntactic Analysis (Parsing)
     Parser parser(tokens);
     auto program = parser.parse();
 
+    // 3. Execution / Interpretation
     Interpreter interpreter;
-    interpreter.execute(program);
+    interpreter.run(program);
   }
-  catch (const std::exception &e)
+  catch (const std::exception &error)
   {
-    std::cerr << e.what() << '\n';
+    std::cerr << "C-- error: " << error.what() << '\n';
     return 1;
   }
 
