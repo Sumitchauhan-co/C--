@@ -25,13 +25,21 @@ enum class TokenType
     If,
     Elif,
     Else,
+    While,
+    Do,
+    For,
+    Break,
+    Continue,
+    Pass,
     And,
     Or,
     Not,
 
     // Operators
     Plus,
+    PlusPlus, // For ++
     Minus,
+    MinusMinus, // For --
     Star,
     Slash,
     Equal,

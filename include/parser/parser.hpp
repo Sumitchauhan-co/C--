@@ -32,6 +32,12 @@ private:
   StmtPtr variableDeclaration(); // Handles 'let' and 'fix' declarations
   StmtPtr sayStatement();
   StmtPtr ifStatement(); // Handles 'if / elif / else' branches
+  StmtPtr whileStatement();
+  StmtPtr doWhileStatement();
+  StmtPtr forStatement();
+  StmtPtr breakStatement();
+  StmtPtr continueStatement();
+  StmtPtr passStatement();
   StmtPtr expressionStatement();
   std::unique_ptr<BlockStmt> block();
 

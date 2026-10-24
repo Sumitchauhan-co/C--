@@ -1,0 +1,45 @@
+// ==========================================
+// C-- v0.5 Comprehensive Loop & Flow Test
+// ==========================================
+
+say("=== 1. For Loop Test ===")
+for (let x = 10; x < 13; x++) {
+    say(x)
+}
+
+say("=== 2. While Loop Test ===")
+let y = 1
+while (y <= 3) {
+    say(y)
+    y++
+}
+
+
+
+
+say("=== 3. Do-While with Break Test ===")
+let z = 1
+do {
+    if (z == 3) {
+        break
+    }
+    say(z)
+    z++
+} while (z <= 5)
+
+
+say("=== 4. Continue Test (Skipping 3) ===")
+for (let i = 1; i <= 5; i++) {
+    if (i == 3) {
+        continue
+    }
+    say(i)
+}
+
+
+
+say("=== 5. Pass Test ===")
+if (true) {
+    pass
+    say("Pass statement executed successfully!")
+}

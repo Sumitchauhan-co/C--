@@ -40,6 +40,18 @@ std::string tokenTypeName(TokenType type)
         return "Elif";
     case TokenType::Else:
         return "Else";
+    case TokenType::While:
+        return "While";
+    case TokenType::Do:
+        return "Do";
+    case TokenType::For:
+        return "For";
+    case TokenType::Break:
+        return "Break";
+    case TokenType::Continue:
+        return "Continue";
+    case TokenType::Pass:
+        return "Pass";
     case TokenType::And:
         return "And";
     case TokenType::Or:
@@ -48,8 +60,12 @@ std::string tokenTypeName(TokenType type)
         return "Not";
     case TokenType::Plus:
         return "Plus";
+    case TokenType::PlusPlus:
+        return "PlusPlus";
     case TokenType::Minus:
         return "Minus";
+    case TokenType::MinusMinus:
+        return "MinusMinus";
     case TokenType::Star:
         return "Star";
     case TokenType::Slash:
@@ -230,6 +246,12 @@ std::vector<Token> Lexer::scan()
                 {"if", TokenType::If},
                 {"elif", TokenType::Elif},
                 {"else", TokenType::Else},
+                {"while", TokenType::While},
+                {"do", TokenType::Do},
+                {"for", TokenType::For},
+                {"break", TokenType::Break},
+                {"continue", TokenType::Continue},
+                {"pass", TokenType::Pass},
                 {"true", TokenType::True},
                 {"false", TokenType::False},
                 {"and", TokenType::And},
@@ -265,10 +287,26 @@ std::vector<Token> Lexer::scan()
             tokens.push_back({TokenType::Comma, ",", tokenLine, tokenCol});
             break;
         case '+':
-            tokens.push_back({TokenType::Plus, "+", tokenLine, tokenCol});
+            if (peek() == '+')
+            {
+                take();
+                tokens.push_back({TokenType::PlusPlus, "++", tokenLine, tokenCol});
+            }
+            else
+            {
+                tokens.push_back({TokenType::Plus, "+", tokenLine, tokenCol});
+            }
             break;
         case '-':
-            tokens.push_back({TokenType::Minus, "-", tokenLine, tokenCol});
+            if (peek() == '-')
+            {
+                take();
+                tokens.push_back({TokenType::MinusMinus, "--", tokenLine, tokenCol});
+            }
+            else
+            {
+                tokens.push_back({TokenType::Minus, "-", tokenLine, tokenCol});
+            }
             break;
         case '*':
             tokens.push_back({TokenType::Star, "*", tokenLine, tokenCol});

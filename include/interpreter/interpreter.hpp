@@ -9,6 +9,8 @@
 class Interpreter
 {
 public:
+  Interpreter() : environment_(std::make_shared<Environment>()) {}
+
   // Run an entire program (list of statements)
   void run(const Program &program);
 
@@ -16,7 +18,8 @@ public:
   void execute(const Program &program) { run(program); }
 
 private:
-  Environment environment_;
+  std::shared_ptr<Environment> environment_;
+  int loopDepth_ = 0; // Tracks nesting level for valid break/continue statements
 
   // Evaluation of expressions
   Value evaluate(const ExprPtr &expression);
@@ -26,5 +29,9 @@ private:
 
   // Block and control flow execution
   void executeBlock(const BlockStmt &block);
-  void executeIf(const IfStmt &stmt);
+
+  // v0.5 Loop and Control Flow Execution
+  void executeWhile(const WhileStmt &stmt);
+  void executeDoWhile(const DoWhileStmt &stmt);
+  void executeFor(const ForStmt &stmt);
 };

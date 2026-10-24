@@ -5,6 +5,16 @@
 #include <string>
 
 // ==========================================
+// Control Flow Signals
+// ==========================================
+struct BreakSignal
+{
+};
+struct ContinueSignal
+{
+};
+
+// ==========================================
 // Program & Statement Execution
 // ==========================================
 
@@ -24,13 +34,13 @@ void Interpreter::execute(const StmtPtr &statement)
     if (auto node = dynamic_cast<VariableDeclaration *>(statement.get()))
     {
         Value initVal = node->initializer ? evaluate(node->initializer) : 0.0;
-        environment_.declare(node->name, initVal, node->immutable);
+        environment_->declare(node->name, initVal, node->immutable);
         return;
     }
 
     if (auto node = dynamic_cast<Assignment *>(statement.get()))
     {
-        environment_.assign(node->name, evaluate(node->value));
+        environment_->assign(node->name, evaluate(node->value));
         return;
     }
 
@@ -63,14 +73,186 @@ void Interpreter::execute(const StmtPtr &statement)
         return;
     }
 
+    if (auto node = dynamic_cast<WhileStmt *>(statement.get()))
+    {
+        executeWhile(*node);
+        return;
+    }
+
+    if (auto node = dynamic_cast<DoWhileStmt *>(statement.get()))
+    {
+        executeDoWhile(*node);
+        return;
+    }
+
+    if (auto node = dynamic_cast<ForStmt *>(statement.get()))
+    {
+        executeFor(*node);
+        return;
+    }
+
+    if (dynamic_cast<BreakStmt *>(statement.get()))
+    {
+        if (loopDepth_ <= 0)
+        {
+            throw std::runtime_error("Runtime error: 'break' outside of loop.");
+        }
+        throw BreakSignal{};
+    }
+
+    if (dynamic_cast<ContinueStmt *>(statement.get()))
+    {
+        if (loopDepth_ <= 0)
+        {
+            throw std::runtime_error("Runtime error: 'continue' outside of loop.");
+        }
+        throw ContinueSignal{};
+    }
+
+    if (dynamic_cast<PassStmt *>(statement.get()))
+    {
+        return; // pass does nothing
+    }
+
     throw std::runtime_error("Runtime error: unknown statement type.");
 }
 
 void Interpreter::executeBlock(const BlockStmt &block)
 {
-    for (const auto &stmt : block.statements)
+    auto oldEnv = environment_;
+    environment_ = std::make_shared<Environment>(oldEnv);
+
+    try
     {
-        execute(stmt);
+        for (const auto &stmt : block.statements)
+        {
+            execute(stmt);
+        }
+        environment_ = oldEnv;
+    }
+    catch (...)
+    {
+        environment_ = oldEnv;
+        throw;
+    }
+}
+
+// ==========================================
+// v0.5 Loop Execution Handlers
+// ==========================================
+
+void Interpreter::executeWhile(const WhileStmt &stmt)
+{
+    ++loopDepth_;
+    try
+    {
+        while (requireBoolean(evaluate(stmt.condition)))
+        {
+            try
+            {
+                executeBlock(*stmt.body);
+            }
+            catch (const ContinueSignal &)
+            {
+                continue;
+            }
+            catch (const BreakSignal &)
+            {
+                break;
+            }
+        }
+        --loopDepth_;
+    }
+    catch (...)
+    {
+        --loopDepth_;
+        throw;
+    }
+}
+
+void Interpreter::executeDoWhile(const DoWhileStmt &stmt)
+{
+    ++loopDepth_;
+    try
+    {
+        do
+        {
+            try
+            {
+                executeBlock(*stmt.body);
+            }
+            catch (const ContinueSignal &)
+            {
+                // Continue goes to condition check
+            }
+            catch (const BreakSignal &)
+            {
+                break;
+            }
+        } while (requireBoolean(evaluate(stmt.condition)));
+        --loopDepth_;
+    }
+    catch (...)
+    {
+        --loopDepth_;
+        throw;
+    }
+}
+
+void Interpreter::executeFor(const ForStmt &stmt)
+{
+    auto oldEnv = environment_;
+    environment_ = std::make_shared<Environment>(oldEnv);
+
+    ++loopDepth_;
+    try
+    {
+        if (stmt.initializer)
+        {
+            execute(stmt.initializer);
+        }
+
+        while (true)
+        {
+            if (stmt.condition)
+            {
+                if (!requireBoolean(evaluate(stmt.condition)))
+                {
+                    break;
+                }
+            }
+
+            try
+            {
+                executeBlock(*stmt.body);
+            }
+            catch (const ContinueSignal &)
+            {
+                if (stmt.update)
+                {
+                    execute(stmt.update);
+                }
+                continue;
+            }
+            catch (const BreakSignal &)
+            {
+                break;
+            }
+
+            if (stmt.update)
+            {
+                execute(stmt.update);
+            }
+        }
+
+        environment_ = oldEnv;
+        --loopDepth_;
+    }
+    catch (...)
+    {
+        environment_ = oldEnv;
+        --loopDepth_;
+        throw;
     }
 }
 
@@ -90,7 +272,7 @@ Value Interpreter::evaluate(const ExprPtr &expression)
 
     if (auto node = dynamic_cast<VariableExpr *>(expression.get()))
     {
-        return environment_.get(node->name);
+        return environment_->get(node->name);
     }
 
     // Handle CallExpr (e.g. say(...) and ask(...))

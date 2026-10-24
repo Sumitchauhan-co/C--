@@ -119,6 +119,52 @@ struct IfStmt final : Stmt
   std::unique_ptr<BlockStmt> otherwiseBranch;
 };
 
+// ==========================================
+// v0.5 Loop & Control Flow Statements
+// ==========================================
+
+struct WhileStmt final : Stmt
+{
+  WhileStmt(ExprPtr condition, std::unique_ptr<BlockStmt> body)
+      : condition(std::move(condition)), body(std::move(body)) {}
+
+  ExprPtr condition;
+  std::unique_ptr<BlockStmt> body;
+};
+
+struct DoWhileStmt final : Stmt
+{
+  DoWhileStmt(std::unique_ptr<BlockStmt> body, ExprPtr condition)
+      : body(std::move(body)), condition(std::move(condition)) {}
+
+  std::unique_ptr<BlockStmt> body;
+  ExprPtr condition;
+};
+
+struct ForStmt final : Stmt
+{
+  ForStmt(StmtPtr initializer, ExprPtr condition, StmtPtr update, std::unique_ptr<BlockStmt> body)
+      : initializer(std::move(initializer)), condition(std::move(condition)),
+        update(std::move(update)), body(std::move(body)) {}
+
+  StmtPtr initializer;
+  ExprPtr condition;
+  StmtPtr update;
+  std::unique_ptr<BlockStmt> body;
+};
+
+struct BreakStmt final : Stmt
+{
+};
+
+struct ContinueStmt final : Stmt
+{
+};
+
+struct PassStmt final : Stmt
+{
+};
+
 struct SayStatement final : Stmt
 {
   explicit SayStatement(ExprPtr expression) : expression(std::move(expression)) {}

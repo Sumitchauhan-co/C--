@@ -19,18 +19,21 @@ std::string valueToString(const Value &value)
     return std::get<bool>(value) ? "true" : "false";
   return std::get<std::string>(value);
 }
+
 double requireNumber(const Value &value)
 {
   if (!std::holds_alternative<double>(value))
     throw std::runtime_error("Expected a number, got '" + valueToString(value) + "'");
   return std::get<double>(value);
 }
+
 bool requireBoolean(const Value &value)
 {
   if (!std::holds_alternative<bool>(value))
     throw std::runtime_error("Condition must be true or false, got '" + valueToString(value) + "'");
   return std::get<bool>(value);
 }
+
 bool valuesEqual(const Value &left, const Value &right)
 {
   if (left.index() != right.index())

@@ -129,13 +129,125 @@ StmtPtr Parser::statement()
     return std::make_unique<IfStmt>(std::move(branches), std::move(otherwise));
   }
 
-  // Handle assignments
-  if (check(TokenType::Identifier) && current_ + 1 < tokens_.size() && tokens_[current_ + 1].type == TokenType::Equal)
+  // Handle while loop
+  if (match(TokenType::While))
   {
-    std::string name = advance().lexeme;
-    advance(); // consume '='
-    auto val = expression();
-    return std::make_unique<Assignment>(name, std::move(val));
+    ExprPtr condition = expression();
+    std::unique_ptr<BlockStmt> body = block();
+    return std::make_unique<WhileStmt>(std::move(condition), std::move(body));
+  }
+
+  // Handle do-while loop
+  if (match(TokenType::Do))
+  {
+    std::unique_ptr<BlockStmt> body = block();
+    consume(TokenType::While, "Expected 'while' after do-while block.");
+    ExprPtr condition = expression();
+    return std::make_unique<DoWhileStmt>(std::move(body), std::move(condition));
+  }
+
+  // Handle for loop
+  if (match(TokenType::For))
+  {
+    consume(TokenType::LeftParen, "Expected '(' after 'for'.");
+
+    StmtPtr initializer = nullptr;
+    if (!match(TokenType::Newline) && !match(TokenType::Semicolon))
+    {
+      if (match(TokenType::Let) || match(TokenType::Fix))
+      {
+        bool immutable = (previous().type == TokenType::Fix);
+        Token nameToken = consume(TokenType::Identifier, "Expected variable name in for-loop initializer.");
+        consume(TokenType::Equal, "Expected '=' after variable name.");
+        ExprPtr initVal = expression();
+        initializer = std::make_unique<VariableDeclaration>(nameToken.lexeme, immutable, std::move(initVal));
+      }
+      else
+      {
+        auto expr = expression();
+        initializer = std::make_unique<ExpressionStatement>(std::move(expr));
+      }
+      match(TokenType::Newline);
+      match(TokenType::Semicolon);
+    }
+
+    ExprPtr condition = nullptr;
+    if (!check(TokenType::Newline) && !check(TokenType::Semicolon) && !check(TokenType::RightParen))
+    {
+      condition = expression();
+    }
+    match(TokenType::Newline);
+    match(TokenType::Semicolon);
+
+    StmtPtr update = nullptr;
+    if (!check(TokenType::RightParen))
+    {
+      if (check(TokenType::Identifier) && current_ + 1 < tokens_.size() &&
+          (tokens_[current_ + 1].type == TokenType::PlusPlus || tokens_[current_ + 1].type == TokenType::MinusMinus))
+      {
+        std::string varName = advance().lexeme;
+        TokenType opType = advance().type;
+        std::string opStr = (opType == TokenType::PlusPlus) ? "+" : "-";
+        auto one = std::make_unique<LiteralExpr>(1.0);
+        auto bin = std::make_unique<BinaryExpr>(std::make_unique<VariableExpr>(varName), opStr, std::move(one));
+        update = std::make_unique<Assignment>(varName, std::move(bin));
+      }
+      else if (check(TokenType::Identifier) && current_ + 1 < tokens_.size() && tokens_[current_ + 1].type == TokenType::Equal)
+      {
+        std::string name = advance().lexeme;
+        advance(); // consume '='
+        auto val = expression();
+        update = std::make_unique<Assignment>(name, std::move(val));
+      }
+      else
+      {
+        auto expr = expression();
+        update = std::make_unique<ExpressionStatement>(std::move(expr)); // Wrapped as StmtPtr
+      }
+    }
+
+    consume(TokenType::RightParen, "Expected ')' after for-loop clauses.");
+    std::unique_ptr<BlockStmt> body = block();
+    return std::make_unique<ForStmt>(std::move(initializer), std::move(condition), std::move(update), std::move(body));
+  }
+
+  // Handle break statement
+  if (match(TokenType::Break))
+  {
+    return std::make_unique<BreakStmt>();
+  }
+
+  // Handle continue statement
+  if (match(TokenType::Continue))
+  {
+    return std::make_unique<ContinueStmt>();
+  }
+
+  // Handle pass statement
+  if (match(TokenType::Pass))
+  {
+    return std::make_unique<PassStmt>();
+  }
+
+  // Handle assignments (including x++ / x--)
+  if (check(TokenType::Identifier) && current_ + 1 < tokens_.size())
+  {
+    if (tokens_[current_ + 1].type == TokenType::Equal)
+    {
+      std::string name = advance().lexeme;
+      advance(); // consume '='
+      auto val = expression();
+      return std::make_unique<Assignment>(name, std::move(val));
+    }
+    if (tokens_[current_ + 1].type == TokenType::PlusPlus || tokens_[current_ + 1].type == TokenType::MinusMinus)
+    {
+      std::string name = advance().lexeme;
+      TokenType opType = advance().type;
+      std::string opStr = (opType == TokenType::PlusPlus) ? "+" : "-";
+      auto one = std::make_unique<LiteralExpr>(1.0);
+      auto bin = std::make_unique<BinaryExpr>(std::make_unique<VariableExpr>(name), opStr, std::move(one));
+      return std::make_unique<Assignment>(name, std::move(bin));
+    }
   }
 
   // Default to expression statement
