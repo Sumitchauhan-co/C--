@@ -29,8 +29,6 @@ events:
       - "ninja"
       - "samu"
     candidate_directories:
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -42,6 +40,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -54,25 +54,8 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja-build.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja-build.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja-build"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/ninja"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/samu.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/samu.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/samu"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja-build.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja-build.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja-build"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/ninja"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/samu.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/samu.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/samu"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/ninja-build.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/ninja-build.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/ninja-build"
@@ -107,8 +90,6 @@ events:
     found: "C:/Users/HP/w64devkit/bin/ninja.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -137,6 +118,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -163,8 +147,6 @@ events:
       - "icx"
       - "clang++"
     candidate_directories:
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -176,6 +158,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -188,43 +172,8 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/c++.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/c++.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/c++"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/g++.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/g++.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/g++"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/cl"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/bcc"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/icx"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang++.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang++.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/clang++"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/c++.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/c++.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/c++"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/g++.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/g++.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/g++"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/cl"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/bcc"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/icx"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang++.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang++.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/clang++"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/c++.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/c++.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/c++"
@@ -283,8 +232,6 @@ events:
     found: "C:/Users/HP/w64devkit/bin/c++.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -313,6 +260,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -341,8 +291,6 @@ events:
     found: "C:/Users/HP/w64devkit/share/cmake-4.4/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -371,6 +319,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "message-v1"
@@ -415,8 +366,6 @@ events:
       - "ar"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -427,6 +376,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -439,13 +390,12 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/ar.com"
     found: "C:/Users/HP/w64devkit/bin/ar.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -474,6 +424,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -496,8 +449,6 @@ events:
       - "ranlib"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -508,6 +459,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -520,13 +473,12 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/ranlib.com"
     found: "C:/Users/HP/w64devkit/bin/ranlib.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -555,6 +507,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -577,8 +532,6 @@ events:
       - "strip"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -589,6 +542,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -601,13 +556,12 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/strip.com"
     found: "C:/Users/HP/w64devkit/bin/strip.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -636,6 +590,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -658,8 +615,6 @@ events:
       - "ld"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -670,6 +625,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -682,13 +639,12 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/ld.com"
     found: "C:/Users/HP/w64devkit/bin/ld.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -717,6 +673,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -739,8 +698,6 @@ events:
       - "nm"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -751,6 +708,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -763,13 +722,12 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/nm.com"
     found: "C:/Users/HP/w64devkit/bin/nm.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -798,6 +756,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -820,8 +781,6 @@ events:
       - "objdump"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -832,6 +791,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -844,13 +805,12 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/objdump.com"
     found: "C:/Users/HP/w64devkit/bin/objdump.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -879,6 +839,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -901,8 +864,6 @@ events:
       - "objcopy"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -913,6 +874,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -925,13 +888,12 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/objcopy.com"
     found: "C:/Users/HP/w64devkit/bin/objcopy.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -960,6 +922,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -982,8 +947,6 @@ events:
       - "readelf"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -994,6 +957,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -1006,16 +971,11 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/readelf.com"
       - "C:/Users/HP/w64devkit/bin/readelf.exe"
       - "C:/Users/HP/w64devkit/bin/readelf"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/readelf.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/readelf.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/readelf"
@@ -1046,12 +1006,16 @@ events:
       - "C:/Users/HP/AppData/Local/pnpm/readelf.com"
       - "C:/Users/HP/AppData/Local/pnpm/readelf.exe"
       - "C:/Users/HP/AppData/Local/pnpm/readelf"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf"
       - "C:/MinGW/bin/readelf.com"
     found: "C:/MinGW/bin/readelf.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -1080,6 +1044,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -1102,8 +1069,6 @@ events:
       - "dlltool"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -1114,6 +1079,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -1126,13 +1093,12 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/dlltool.com"
     found: "C:/Users/HP/w64devkit/bin/dlltool.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -1161,6 +1127,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -1183,8 +1152,6 @@ events:
       - "addr2line"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -1195,6 +1162,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -1207,13 +1176,12 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/addr2line.com"
     found: "C:/Users/HP/w64devkit/bin/addr2line.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -1242,6 +1210,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -1264,8 +1235,6 @@ events:
       - "tapi"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -1276,6 +1245,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -1288,16 +1259,11 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/tapi.com"
       - "C:/Users/HP/w64devkit/bin/tapi.exe"
       - "C:/Users/HP/w64devkit/bin/tapi"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/tapi.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/tapi.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/tapi"
@@ -1328,6 +1294,12 @@ events:
       - "C:/Users/HP/AppData/Local/pnpm/tapi.com"
       - "C:/Users/HP/AppData/Local/pnpm/tapi.exe"
       - "C:/Users/HP/AppData/Local/pnpm/tapi"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
       - "C:/MinGW/bin/tapi.com"
       - "C:/MinGW/bin/tapi.exe"
       - "C:/MinGW/bin/tapi"
@@ -1364,11 +1336,12 @@ events:
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/tapi.com"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/tapi.exe"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/tapi"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/tapi.com"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/tapi.exe"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/tapi"
     found: false
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -1397,6 +1370,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -1422,8 +1398,6 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -1434,6 +1408,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -1446,16 +1422,11 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/gcc-ar-16.2.com"
       - "C:/Users/HP/w64devkit/bin/gcc-ar-16.2.exe"
       - "C:/Users/HP/w64devkit/bin/gcc-ar-16.2"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.2.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.2.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.2"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.2.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.2.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.2"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ar-16.2.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ar-16.2.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ar-16.2"
@@ -1486,6 +1457,12 @@ events:
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ar-16.2.com"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ar-16.2.exe"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ar-16.2"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.2.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.2.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.2"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.2.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.2.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.2"
       - "C:/MinGW/bin/gcc-ar-16.2.com"
       - "C:/MinGW/bin/gcc-ar-16.2.exe"
       - "C:/MinGW/bin/gcc-ar-16.2"
@@ -1522,15 +1499,12 @@ events:
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ar-16.2.com"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ar-16.2.exe"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ar-16.2"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar-16.2.com"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar-16.2.exe"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar-16.2"
       - "C:/Users/HP/w64devkit/bin/gcc-ar-16.com"
       - "C:/Users/HP/w64devkit/bin/gcc-ar-16.exe"
       - "C:/Users/HP/w64devkit/bin/gcc-ar-16"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ar-16.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ar-16.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ar-16"
@@ -1561,6 +1535,12 @@ events:
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ar-16.com"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ar-16.exe"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ar-16"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16"
       - "C:/MinGW/bin/gcc-ar-16.com"
       - "C:/MinGW/bin/gcc-ar-16.exe"
       - "C:/MinGW/bin/gcc-ar-16"
@@ -1597,15 +1577,12 @@ events:
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ar-16.com"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ar-16.exe"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ar-16"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar-16.com"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar-16.exe"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar-16"
       - "C:/Users/HP/w64devkit/bin/gcc-ar16.com"
       - "C:/Users/HP/w64devkit/bin/gcc-ar16.exe"
       - "C:/Users/HP/w64devkit/bin/gcc-ar16"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar16.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar16.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar16"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar16.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar16.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar16"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ar16.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ar16.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ar16"
@@ -1636,6 +1613,12 @@ events:
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ar16.com"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ar16.exe"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ar16"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar16.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar16.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar16"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar16.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar16.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar16"
       - "C:/MinGW/bin/gcc-ar16.com"
       - "C:/MinGW/bin/gcc-ar16.exe"
       - "C:/MinGW/bin/gcc-ar16"
@@ -1672,12 +1655,13 @@ events:
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ar16.com"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ar16.exe"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ar16"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar16.com"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar16.exe"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar16"
       - "C:/Users/HP/w64devkit/bin/gcc-ar.com"
     found: "C:/Users/HP/w64devkit/bin/gcc-ar.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -1706,6 +1690,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -1731,8 +1718,6 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "C:/Users/HP/w64devkit/bin/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -1743,6 +1728,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -1755,16 +1742,11 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
     searched_directories:
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib-16.2.com"
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib-16.2.exe"
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib-16.2"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.2.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.2.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.2"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.2.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.2.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.2"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ranlib-16.2.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ranlib-16.2.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ranlib-16.2"
@@ -1795,6 +1777,12 @@ events:
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ranlib-16.2.com"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ranlib-16.2.exe"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ranlib-16.2"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.2.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.2.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.2"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.2.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.2.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.2"
       - "C:/MinGW/bin/gcc-ranlib-16.2.com"
       - "C:/MinGW/bin/gcc-ranlib-16.2.exe"
       - "C:/MinGW/bin/gcc-ranlib-16.2"
@@ -1831,15 +1819,12 @@ events:
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ranlib-16.2.com"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ranlib-16.2.exe"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ranlib-16.2"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib-16.2.com"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib-16.2.exe"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib-16.2"
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib-16.com"
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib-16.exe"
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib-16"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ranlib-16.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ranlib-16.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ranlib-16"
@@ -1870,6 +1855,12 @@ events:
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ranlib-16.com"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ranlib-16.exe"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ranlib-16"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16"
       - "C:/MinGW/bin/gcc-ranlib-16.com"
       - "C:/MinGW/bin/gcc-ranlib-16.exe"
       - "C:/MinGW/bin/gcc-ranlib-16"
@@ -1906,15 +1897,12 @@ events:
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ranlib-16.com"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ranlib-16.exe"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ranlib-16"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib-16.com"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib-16.exe"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib-16"
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib16.com"
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib16.exe"
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib16"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib16.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib16.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib16"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib16.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib16.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib16"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ranlib16.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ranlib16.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/gcc-ranlib16"
@@ -1945,6 +1933,12 @@ events:
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ranlib16.com"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ranlib16.exe"
       - "C:/Users/HP/AppData/Local/pnpm/gcc-ranlib16"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib16.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib16.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib16"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib16.com"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib16.exe"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib16"
       - "C:/MinGW/bin/gcc-ranlib16.com"
       - "C:/MinGW/bin/gcc-ranlib16.exe"
       - "C:/MinGW/bin/gcc-ranlib16"
@@ -1981,12 +1975,13 @@ events:
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ranlib16.com"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ranlib16.exe"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/gcc-ranlib16"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib16.com"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib16.exe"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib16"
       - "C:/Users/HP/w64devkit/bin/gcc-ranlib.com"
     found: "C:/Users/HP/w64devkit/bin/gcc-ranlib.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -2015,6 +2010,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
   -
     kind: "find-v1"
@@ -2039,8 +2037,6 @@ events:
       - "windres"
       - "windres"
     candidate_directories:
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/"
       - "C:/Program Files/Eclipse Adoptium/jdk-17.0.10.7-hotspot/bin/"
       - "C:/Users/HP/anaconda3/Scripts/"
@@ -2052,6 +2048,8 @@ events:
       - "C:/Program Files/nodejs/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Users/HP/AppData/Local/pnpm/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "C:/MinGW/bin/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/Scripts/"
       - "C:/Users/HP/AppData/Local/Programs/Python/Python313/"
@@ -2064,6 +2062,7 @@ events:
       - "C:/Users/HP/AppData/Local/Programs/Ollama/"
       - "C:/Users/HP/AppData/Roaming/npm/"
       - "C:/Users/HP/AppData/Local/Android/Sdk/platform-tools/"
+      - "C:/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -2077,12 +2076,6 @@ events:
       - "C:/Program Files (x86)/cmm/sbin/"
       - "C:/Program Files (x86)/cmm/"
     searched_directories:
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/windres.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/windres.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/windres"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/windres.com"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/windres.exe"
-      - "C:/Users/HP/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/windres"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/windres.com"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/windres.exe"
       - "C:/Program Files/Microsoft/jdk-17.0.13.11-hotspot/bin/windres"
@@ -2096,8 +2089,6 @@ events:
     found: "C:/Users/HP/w64devkit/bin/windres.exe"
     search_context:
       ENV{PATH}:
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
-        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
         - "C:\\Program Files\\Microsoft\\jdk-17.0.13.11-hotspot\\bin"
         - "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.10.7-hotspot\\bin"
         - "C:\\Users\\HP\\anaconda3\\Scripts"
@@ -2126,6 +2117,9 @@ events:
         - "C:\\Users\\HP\\AppData\\Roaming\\npm"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Users\\HP\\AppData\\Local\\Android\\Sdk\\platform-tools"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
+        - "c:\\Users\\HP\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "C:\\Users\\HP\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\copilot-shim"
         - "C:\\Program Files\\CMake\\bin"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/cmm"
       CMAKE_SYSTEM_PREFIX_PATH:
@@ -2142,8 +2136,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/CMakeScratch/TryCompile-5eb1p9"
-      binary: "C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/CMakeScratch/TryCompile-5eb1p9"
+      source: "C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/CMakeScratch/TryCompile-eypet0"
+      binary: "C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/CMakeScratch/TryCompile-eypet0"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2154,10 +2148,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: 'C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/CMakeScratch/TryCompile-5eb1p9'
+        Change Dir: 'C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/CMakeScratch/TryCompile-eypet0'
         
-        Run Build Command(s): C:/Users/HP/w64devkit/bin/ninja.exe -v cmTC_e8676
-        [1/2] C:\\Users\\HP\\w64devkit\\bin\\c++.exe   -v -o CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/HP/w64devkit/share/cmake-4.4/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/Users/HP/w64devkit/bin/ninja.exe -v cmTC_06966
+        [1/2] C:\\Users\\HP\\w64devkit\\bin\\c++.exe   -v -o CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/HP/w64devkit/share/cmake-4.4/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\HP\\w64devkit\\bin\\g++.exe
         Target: i686-w64-mingw32
@@ -2165,8 +2159,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 16.2.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_e8676.dir/'
-         C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/ -isysroot C:/Users/HP/w64devkit/bin/../../w64devkit -D_REENTRANT C:/Users/HP/w64devkit/share/cmake-4.4/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e8676.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=pentium4 -version -o C:\\Users\\HP\\AppData\\Local\\Temp\\ccCuBhDJ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_06966.dir/'
+         C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/ -isysroot C:/Users/HP/w64devkit/bin/../../w64devkit -D_REENTRANT C:/Users/HP/w64devkit/share/cmake-4.4/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_06966.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=pentium4 -version -o C:\\Users\\HP\\AppData\\Local\\Temp\\ccIw8JI6.s
         GNU C++20 (GCC) version 16.2.0 (i686-w64-mingw32)
         	compiled by GNU C version 16.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -2187,13 +2181,13 @@ events:
          C:/Users/HP/w64devkit/lib/gcc/../../lib/gcc/i686-w64-mingw32/16.2.0/../../../../include
         End of search list.
         Compiler executable checksum: aa6e25ef481fa3390282f0c01fe56a15
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_e8676.dir/'
-         C:/Users/HP/w64devkit/bin/as.exe -v -o CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\HP\\AppData\\Local\\Temp\\ccCuBhDJ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_06966.dir/'
+         C:/Users/HP/w64devkit/bin/as.exe -v -o CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\HP\\AppData\\Local\\Temp\\ccIw8JI6.s
         GNU assembler version 2.47 (i686-w64-mingw32) using BFD version (GNU Binutils) 2.47.20260726
         COMPILER_PATH=C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/;C:/Users/HP/w64devkit/bin/../libexec/gcc/;C:/Users/HP/w64devkit/bin/
         LIBRARY_PATH=C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/;C:/Users/HP/w64devkit/bin/../lib/gcc/;C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/;C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\HP\\w64devkit\\bin\\c++.exe  -v -Wl,-v CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_e8676.exe -Wl,--out-implib,libcmTC_e8676.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\HP\\w64devkit\\bin\\c++.exe  -v -Wl,-v CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_06966.exe -Wl,--out-implib,libcmTC_06966.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\HP\\w64devkit\\bin\\g++.exe
         COLLECT_LTO_WRAPPER=C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/lto-wrapper.exe
@@ -2204,12 +2198,12 @@ events:
         gcc version 16.2.0 (GCC) 
         COMPILER_PATH=C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/;C:/Users/HP/w64devkit/bin/../libexec/gcc/;C:/Users/HP/w64devkit/bin/
         LIBRARY_PATH=C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/;C:/Users/HP/w64devkit/bin/../lib/gcc/;C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/;C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e8676.exe' '-mtune=generic' '-march=pentium4' '-dumpdir' 'cmTC_e8676.'
-         C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/collect2.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_e8676.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_e8676.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_06966.exe' '-mtune=generic' '-march=pentium4' '-dumpdir' 'cmTC_06966.'
+         C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/collect2.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_06966.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_06966.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o
         collect2 version 16.2.0
-        C:/Users/HP/w64devkit/bin/ld.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_e8676.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_e8676.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o
+        C:/Users/HP/w64devkit/bin/ld.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_06966.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_06966.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o
         GNU ld (GNU Binutils) 2.47.20260726
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e8676.exe' '-mtune=generic' '-march=pentium4' '-dumpdir' 'cmTC_e8676.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_06966.exe' '-mtune=generic' '-march=pentium4' '-dumpdir' 'cmTC_06966.'
         
       exitCode: 0
   -
@@ -2248,10 +2242,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/CMakeScratch/TryCompile-5eb1p9']
+        ignore line: [Change Dir: 'C:/Users/HP/Desktop/Development/Projects/C--/build/CMakeFiles/CMakeScratch/TryCompile-eypet0']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/HP/w64devkit/bin/ninja.exe -v cmTC_e8676]
-        ignore line: [[1/2] C:\\Users\\HP\\w64devkit\\bin\\c++.exe   -v -o CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/HP/w64devkit/share/cmake-4.4/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/Users/HP/w64devkit/bin/ninja.exe -v cmTC_06966]
+        ignore line: [[1/2] C:\\Users\\HP\\w64devkit\\bin\\c++.exe   -v -o CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/HP/w64devkit/share/cmake-4.4/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\HP\\w64devkit\\bin\\g++.exe]
         ignore line: [Target: i686-w64-mingw32]
@@ -2259,8 +2253,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 16.2.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_e8676.dir/']
-        ignore line: [ C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/ -isysroot C:/Users/HP/w64devkit/bin/../../w64devkit -D_REENTRANT C:/Users/HP/w64devkit/share/cmake-4.4/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e8676.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=pentium4 -version -o C:\\Users\\HP\\AppData\\Local\\Temp\\ccCuBhDJ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_06966.dir/']
+        ignore line: [ C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/ -isysroot C:/Users/HP/w64devkit/bin/../../w64devkit -D_REENTRANT C:/Users/HP/w64devkit/share/cmake-4.4/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_06966.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=pentium4 -version -o C:\\Users\\HP\\AppData\\Local\\Temp\\ccIw8JI6.s]
         ignore line: [GNU C++20 (GCC) version 16.2.0 (i686-w64-mingw32)]
         ignore line: [	compiled by GNU C version 16.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -2281,8 +2275,8 @@ events:
         ignore line: [ C:/Users/HP/w64devkit/lib/gcc/../../lib/gcc/i686-w64-mingw32/16.2.0/../../../../include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: aa6e25ef481fa3390282f0c01fe56a15]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_e8676.dir/']
-        ignore line: [ C:/Users/HP/w64devkit/bin/as.exe -v -o CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\HP\\AppData\\Local\\Temp\\ccCuBhDJ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_06966.dir/']
+        ignore line: [ C:/Users/HP/w64devkit/bin/as.exe -v -o CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\HP\\AppData\\Local\\Temp\\ccIw8JI6.s]
         ignore line: [GNU assembler version 2.47 (i686-w64-mingw32) using BFD version (GNU Binutils) 2.47.20260726]
         ignore line: [COMPILER_PATH=C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/]
         ignore line: [C:/Users/HP/w64devkit/bin/../libexec/gcc/]
@@ -2291,8 +2285,8 @@ events:
         ignore line: [C:/Users/HP/w64devkit/bin/../lib/gcc/]
         ignore line: [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/]
         ignore line: [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\HP\\w64devkit\\bin\\c++.exe  -v -Wl -v CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_e8676.exe -Wl --out-implib libcmTC_e8676.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mtune=generic' '-march=pentium4' '-dumpdir' 'CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\HP\\w64devkit\\bin\\c++.exe  -v -Wl -v CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_06966.exe -Wl --out-implib libcmTC_06966.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\HP\\w64devkit\\bin\\g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/lto-wrapper.exe]
@@ -2308,15 +2302,15 @@ events:
         ignore line: [C:/Users/HP/w64devkit/bin/../lib/gcc/]
         ignore line: [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/]
         ignore line: [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e8676.exe' '-mtune=generic' '-march=pentium4' '-dumpdir' 'cmTC_e8676.']
-        link line: [ C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/collect2.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_e8676.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_e8676.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_06966.exe' '-mtune=generic' '-march=pentium4' '-dumpdir' 'cmTC_06966.']
+        link line: [ C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/collect2.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_06966.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_06966.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o]
           arg [C:/Users/HP/w64devkit/bin/../libexec/gcc/i686-w64-mingw32/16.2.0/collect2.exe] ==> ignore
           arg [--sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit] ==> ignore
           arg [-m] ==> ignore
           arg [i386pe] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_e8676.exe] ==> ignore
+          arg [cmTC_06966.exe] ==> ignore
           arg [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o] ==> obj [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o]
           arg [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o] ==> obj [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o]
           arg [-LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0] ==> dir [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0]
@@ -2324,9 +2318,9 @@ events:
           arg [-LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib] ==> dir [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib]
           arg [-LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../..] ==> dir [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_e8676.dll.a] ==> ignore
+          arg [libcmTC_06966.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -2349,9 +2343,9 @@ events:
           arg [-lkernel32] ==> lib [kernel32]
           arg [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o] ==> obj [C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o]
         ignore line: [collect2 version 16.2.0]
-        link line: [C:/Users/HP/w64devkit/bin/ld.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_e8676.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_e8676.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o] ==> linker [C:/Users/HP/w64devkit/bin/ld.exe]
-        link line: [C:/Users/HP/w64devkit/bin/ld.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_e8676.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_e8676.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o] ==> linker architecture flags [-m;i386pe]
-        ignore line: [C:/Users/HP/w64devkit/bin/ld.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_e8676.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_e8676.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_e8676.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o]
+        link line: [C:/Users/HP/w64devkit/bin/ld.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_06966.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_06966.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o] ==> linker [C:/Users/HP/w64devkit/bin/ld.exe]
+        link line: [C:/Users/HP/w64devkit/bin/ld.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_06966.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_06966.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o] ==> linker architecture flags [-m;i386pe]
+        ignore line: [C:/Users/HP/w64devkit/bin/ld.exe --sysroot=C:/Users/HP/w64devkit/bin/../../w64devkit -m i386pe -Bdynamic -o cmTC_06966.exe C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib/crt2.o C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtbegin.o -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0 -LC:/Users/HP/w64devkit/bin/../lib/gcc -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../../../lib -LC:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/../../.. -v CMakeFiles/cmTC_06966.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_06966.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Users/HP/w64devkit/bin/../lib/gcc/i686-w64-mingw32/16.2.0/crtend.o]
         linker tool for 'CXX': C:/Users/HP/w64devkit/bin/ld.exe -m;i386pe
         remove lib [msvcrt]
         remove lib [msvcrt]

@@ -1,14 +1,12 @@
 # ninja log v7
-134	921	8149720773637227	CMakeFiles/lexer_demo.dir/tests/lexer_demo.cpp.obj	d415be1811982922
-152	2972	8149705127719182	CMakeFiles/cmm.dir/src/runtime/environment.cpp.obj	d558db60f2bd1ac7
-64	1198	8149720773001598	CMakeFiles/cmm.dir/src/lexer/lexer.cpp.obj	a2b824d6c4a92fe
-144	1237	8149720773734235	CMakeFiles/lexer_demo.dir/src/lexer/lexer.cpp.obj	914234fb7b2ecc68
-99	2326	8149720773286656	CMakeFiles/cmm.dir/src/interpreter/interpreter.cpp.obj	611fea063c842cee
-49	1503	8149720772788927	CMakeFiles/cmm.dir/src/main.cpp.obj	d7bddfb9a1e2260d
-85	2553	8149720773159749	CMakeFiles/cmm.dir/src/parser/parser.cpp.obj	9b7c2f1c055e0a95
-1237	1687	8149720784674703	lexer_demo.exe	44e12dc8e979d5f6
-2554	2912	8149720797828766	cmm.exe	acd87e34b439ee93
-122	1085	8149720773523224	CMakeFiles/cmm.dir/src/ast/ast.cpp.obj	51a352499851723f
-110	1531	8149720773399734	CMakeFiles/cmm.dir/src/runtime/value.cpp.obj	eca53e7bf0f5aa84
-32	2442	8149723025029566	CMakeFiles/cmm.dir/src/parser/parser.cpp.obj	9b7c2f1c055e0a95
-2443	2903	8149723049138505	cmm.exe	acd87e34b439ee93
+155	1005	8149737238639248	CMakeFiles/lexer_demo.dir/tests/lexer_demo.cpp.obj	e10de1d5ac930aad
+120	1081	8149737238477732	CMakeFiles/cmm.dir/src/ast/ast.cpp.obj	83899438c89e6eb8
+31	1815	8149737237395695	CMakeFiles/cmm.dir/src/main.cpp.obj	519ab2ae5a8a8760
+49	1848	8149737237570905	CMakeFiles/cmm.dir/src/lexer/lexer.cpp.obj	992cf1f8d8f6c1dd
+94	1889	8149737238019425	CMakeFiles/cmm.dir/src/runtime/environment.cpp.obj	4cf0960da85be078
+173	1891	8149737238812199	CMakeFiles/lexer_demo.dir/src/lexer/lexer.cpp.obj	393b38c2eee782f9
+108	1914	8149737238157426	CMakeFiles/cmm.dir/src/runtime/value.cpp.obj	3d53fa2f2d4da754
+1892	2276	8149737255991020	lexer_demo.exe	873b2bf53efdb2ce
+80	3760	8149737237884854	CMakeFiles/cmm.dir/src/interpreter/interpreter.cpp.obj	2c3703e26a209af
+66	4399	8149737237747957	CMakeFiles/cmm.dir/src/parser/parser.cpp.obj	b901b5403a6af8fd
+4400	4796	8149737281071953	cmm.exe	4f201778b65b902a
