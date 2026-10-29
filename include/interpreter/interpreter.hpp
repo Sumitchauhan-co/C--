@@ -34,4 +34,7 @@ private:
   void executeWhile(const WhileStmt &stmt);
   void executeDoWhile(const DoWhileStmt &stmt);
   void executeFor(const ForStmt &stmt);
+
+  // v0.6 Function Execution helper
+  Value callFunction(const FunctionStmt &fnStmt, const std::vector<Value> &arguments);
 };

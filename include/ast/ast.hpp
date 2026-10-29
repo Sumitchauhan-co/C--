@@ -63,11 +63,43 @@ struct AskExpr final : Expr
 
 struct CallExpr final : Expr
 {
+  // For built-in keyword calls (say, ask)
   CallExpr(TokenType kind, std::vector<ExprPtr> arguments)
-      : kind(kind), arguments(std::move(arguments)) {}
+      : isBuiltin(true), kind(kind), name(""), arguments(std::move(arguments)) {}
 
+  // For user-defined function calls
+  CallExpr(std::string name, std::vector<ExprPtr> arguments)
+      : isBuiltin(false), kind(TokenType::EndOfFile), name(std::move(name)), arguments(std::move(arguments)) {}
+
+  bool isBuiltin;
   TokenType kind;
+  std::string name;
   std::vector<ExprPtr> arguments;
+};
+
+// ==========================================
+// v0.7 Containers & Indexing Expressions
+// ==========================================
+
+struct ArrayExpr final : Expr
+{
+  explicit ArrayExpr(std::vector<ExprPtr> elements) : elements(std::move(elements)) {}
+  std::vector<ExprPtr> elements;
+};
+
+struct ObjectExpr final : Expr
+{
+  explicit ObjectExpr(std::vector<std::pair<ExprPtr, ExprPtr>> pairs) : pairs(std::move(pairs)) {}
+  std::vector<std::pair<ExprPtr, ExprPtr>> pairs;
+};
+
+struct IndexExpr final : Expr
+{
+  IndexExpr(ExprPtr objectOrArray, ExprPtr index)
+      : objectOrArray(std::move(objectOrArray)), index(std::move(index)) {}
+
+  ExprPtr objectOrArray;
+  ExprPtr index;
 };
 
 // ==========================================
@@ -153,6 +185,16 @@ struct ForStmt final : Stmt
   std::unique_ptr<BlockStmt> body;
 };
 
+struct ForInStmt final : Stmt
+{
+  ForInStmt(std::string variable, ExprPtr collection, std::unique_ptr<BlockStmt> body)
+      : variable(std::move(variable)), collection(std::move(collection)), body(std::move(body)) {}
+
+  std::string variable;
+  ExprPtr collection;
+  std::unique_ptr<BlockStmt> body;
+};
+
 struct BreakStmt final : Stmt
 {
 };
@@ -174,5 +216,41 @@ struct SayStatement final : Stmt
 struct ExpressionStatement final : Stmt
 {
   explicit ExpressionStatement(ExprPtr expression) : expression(std::move(expression)) {}
+  ExprPtr expression;
+};
+
+// ==========================================
+// v0.6 Functions & Exception Handling
+// ==========================================
+
+struct FunctionStmt final : Stmt
+{
+  FunctionStmt(std::string name, std::vector<std::string> parameters, std::unique_ptr<BlockStmt> body)
+      : name(std::move(name)), parameters(std::move(parameters)), body(std::move(body)) {}
+
+  std::string name;
+  std::vector<std::string> parameters;
+  std::unique_ptr<BlockStmt> body;
+};
+
+struct ReturnStmt final : Stmt
+{
+  explicit ReturnStmt(ExprPtr value = nullptr) : value(std::move(value)) {}
+  ExprPtr value;
+};
+
+struct TryStmt final : Stmt
+{
+  TryStmt(std::unique_ptr<BlockStmt> tryBody, std::string catchVar, std::unique_ptr<BlockStmt> catchBody)
+      : tryBody(std::move(tryBody)), catchVar(std::move(catchVar)), catchBody(std::move(catchBody)) {}
+
+  std::unique_ptr<BlockStmt> tryBody;
+  std::string catchVar;
+  std::unique_ptr<BlockStmt> catchBody;
+};
+
+struct ThrowStmt final : Stmt
+{
+  explicit ThrowStmt(ExprPtr expression) : expression(std::move(expression)) {}
   ExprPtr expression;
 };

@@ -1,0 +1,27 @@
+// 1. Array declaration and index access
+let numbers = [10, 20, 30, 40]
+say("First number in array:")
+say(numbers[0])
+
+// 2. Object / Map declaration with string and number keys
+let profile = {
+    "name": "Sumit Chauhan",
+    "role": "Full-Stack Developer",
+    2026: "Target Graduation Year"
+}
+
+say("Object lookups:")
+say(profile["name"])
+say(profile["role"])
+say(profile[2026])
+
+// 3. Backtick Template string interpolation
+let sumit = "Sumit"
+let developerRole = "Architect"
+say(`{sumit} hi, welcome to C-- v0.7! You are working as a {developerRole}.`)
+
+// 4. Container iteration using for...in loop
+say("Iterating through numbers array with for...in: {sumit}")
+for n in numbers {
+    say(n)
+}

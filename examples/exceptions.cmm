@@ -1,0 +1,26 @@
+// exceptions.cmm - Testing try-catch exception handling and throw statements
+
+fn riskyDivide(a, b) {
+    if b == 0 {
+        throw "Runtime error: Division by zero encountered!";
+    }
+    return a / b;
+}
+
+say("=== C-- v0.6 Exception Handling Tests ===");
+
+try {
+    say("Executing safe division (10 / 2):");
+    let result1 = riskyDivide(10, 2);
+    say(result1);
+
+    say("Executing risky division (15 / 0):");
+    let result2 = riskyDivide(15, 0);
+    say(result2); // This line will be skipped after the throw
+} 
+catch (errMessage) {
+    say("Caught exception successfully:");
+    say(errMessage);
+}
+
+say("Program resumed normal execution after catch block.");

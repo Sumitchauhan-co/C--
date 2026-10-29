@@ -1,27 +1,24 @@
 #pragma once
 
-#include <cstddef>
 #include <string>
 
 enum class TokenType
 {
-    // Special / End of File
+    // Literals & Identifiers
     EndOfFile,
-    End = EndOfFile,
     Newline,
-
-    // Literals and Identifiers
     Number,
     String,
+    TemplateString, // Backtick strings: `...`
     Identifier,
     True,
     False,
 
     // Keywords
     Let,
-    Fix, // For immutable declarations
+    Fix,
     Say,
-    Ask, // For input syntax
+    Ask,
     If,
     Elif,
     Else,
@@ -31,22 +28,29 @@ enum class TokenType
     Break,
     Continue,
     Pass,
+    Fn,
+    Return,
+    Try,
+    Catch,
+    Throw,
+
+    // Logical Operators
     And,
     Or,
     Not,
 
-    // Operators
+    // Arithmetic & Assignment Operators
     Plus,
-    PlusPlus, // For ++
+    PlusPlus,
     Minus,
-    MinusMinus, // For --
+    MinusMinus,
     Star,
     Slash,
     Equal,
+
+    // Comparison Operators
     EqualEqual,
     BangEqual,
-
-    // Comparisons
     Greater,
     GreaterEqual,
     Less,
@@ -57,6 +61,9 @@ enum class TokenType
     RightParen,
     LeftBrace,
     RightBrace,
+    LeftBracket,  // [
+    RightBracket, // ]
+    Colon,        // :
     Comma,
     Semicolon
 };
@@ -64,7 +71,7 @@ enum class TokenType
 struct Token
 {
     TokenType type;
-    std::string lexeme; // Using lexeme (compatible with text via alias if needed)
+    std::string lexeme;
     std::size_t line;
     std::size_t column;
 };

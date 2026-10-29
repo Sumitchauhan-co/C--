@@ -83,6 +83,9 @@ cmake --build build
 .\build\cmm.exe examples\booleans.cmm
 .\build\cmm.exe examples\conditions.cmm
 .\build\cmm.exe examples\loops.cmm
+.\build\cmm.exe examples\functions.cmm
+.\build\cmm.exe examples\exceptions.cmm
+.\build\cmm.exe examples\containers.cmm
 ```
 
 #### Option B: Windows (using Visual Studio / MSVC)

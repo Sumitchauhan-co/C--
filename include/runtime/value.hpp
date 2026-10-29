@@ -1,13 +1,29 @@
 #pragma once
 
+#include <memory>
 #include <string>
+#include <vector>
+#include <map>
 #include <variant>
 
-// ==========================================
-// C-- Runtime Value Definition
-// ==========================================
+// Forward declaration
+struct FunctionStmt;
+struct Value;
 
-using Value = std::variant<double, bool, std::string>;
+// Container type aliases using shared pointers to avoid recursive incomplete type issues
+using ArrayValue = std::shared_ptr<std::vector<Value>>;
+using ObjectValue = std::shared_ptr<std::map<std::string, Value>>;
+
+struct Value : public std::variant<
+                   double,
+                   bool,
+                   std::string,
+                   std::shared_ptr<FunctionStmt>,
+                   ArrayValue,
+                   ObjectValue>
+{
+    using variant::variant; // Inherit constructors
+};
 
 // ==========================================
 // Runtime Utilities & Type Checkers

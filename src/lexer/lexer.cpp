@@ -20,6 +20,8 @@ std::string tokenTypeName(TokenType type)
         return "Number";
     case TokenType::String:
         return "String";
+    case TokenType::TemplateString:
+        return "TemplateString";
     case TokenType::Identifier:
         return "Identifier";
     case TokenType::True:
@@ -52,6 +54,16 @@ std::string tokenTypeName(TokenType type)
         return "Continue";
     case TokenType::Pass:
         return "Pass";
+    case TokenType::Fn:
+        return "Fn";
+    case TokenType::Return:
+        return "Return";
+    case TokenType::Try:
+        return "Try";
+    case TokenType::Catch:
+        return "Catch";
+    case TokenType::Throw:
+        return "Throw";
     case TokenType::And:
         return "And";
     case TokenType::Or:
@@ -92,6 +104,12 @@ std::string tokenTypeName(TokenType type)
         return "LeftBrace";
     case TokenType::RightBrace:
         return "RightBrace";
+    case TokenType::LeftBracket:
+        return "LeftBracket";
+    case TokenType::RightBracket:
+        return "RightBracket";
+    case TokenType::Colon:
+        return "Colon";
     case TokenType::Comma:
         return "Comma";
     case TokenType::Semicolon:
@@ -212,11 +230,12 @@ std::vector<Token> Lexer::scan()
             continue;
         }
 
-        if (c == '"')
+        // Dual-quote string literal support ('...' and "...")
+        if (c == '"' || c == '\'')
         {
-            take();
+            char quoteChar = take(); // consume opening quote
             std::string value;
-            while (peek() != '\0' && peek() != '"')
+            while (peek() != '\0' && peek() != quoteChar)
             {
                 if (peek() == '\n')
                     throw std::runtime_error("Lexer error: String literal cannot cross a newline.");
@@ -224,8 +243,23 @@ std::vector<Token> Lexer::scan()
             }
             if (peek() == '\0')
                 throw std::runtime_error("Lexer error: Unterminated string literal.");
-            take();
+            take(); // consume closing quote
             tokens.push_back({TokenType::String, value, tokenLine, tokenCol});
+            continue;
+        }
+
+        if (c == '`')
+        {
+            char quoteChar = take(); // consume opening backtick
+            std::string value;
+            while (peek() != '\0' && peek() != quoteChar)
+            {
+                value += take();
+            }
+            if (peek() == '\0')
+                throw std::runtime_error("Lexer error: Unterminated template string literal.");
+            take(); // consume closing backtick
+            tokens.push_back({TokenType::TemplateString, value, tokenLine, tokenCol});
             continue;
         }
 
@@ -252,6 +286,11 @@ std::vector<Token> Lexer::scan()
                 {"break", TokenType::Break},
                 {"continue", TokenType::Continue},
                 {"pass", TokenType::Pass},
+                {"fn", TokenType::Fn},
+                {"return", TokenType::Return},
+                {"try", TokenType::Try},
+                {"catch", TokenType::Catch},
+                {"throw", TokenType::Throw},
                 {"true", TokenType::True},
                 {"false", TokenType::False},
                 {"and", TokenType::And},
@@ -282,6 +321,15 @@ std::vector<Token> Lexer::scan()
             break;
         case '}':
             tokens.push_back({TokenType::RightBrace, "}", tokenLine, tokenCol});
+            break;
+        case '[':
+            tokens.push_back({TokenType::LeftBracket, "[", tokenLine, tokenCol});
+            break;
+        case ']':
+            tokens.push_back({TokenType::RightBracket, "]", tokenLine, tokenCol});
+            break;
+        case ':':
+            tokens.push_back({TokenType::Colon, ":", tokenLine, tokenCol});
             break;
         case ',':
             tokens.push_back({TokenType::Comma, ",", tokenLine, tokenCol});

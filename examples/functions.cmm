@@ -1,0 +1,23 @@
+// functions.cmm - Testing user-defined functions and dual-quote strings
+
+fn greet(name) {
+    let greeting = 'Welcome, ' + name + '!'; // Single-quote string
+    say(greeting);
+    return true;
+}
+
+fn calculateArea(width, height) {
+    return width * height;
+}
+
+say("=== C-- v0.6 Function & String Tests ===");
+
+// Test function with string concatenation
+let status = greet("Alice");
+say("Greeting status:");
+say(status);
+
+// Test numeric function with dynamic typing (integers/doubles)
+let area = calculateArea(12.5, 4);
+say("Calculated Area:");
+say(area); 
